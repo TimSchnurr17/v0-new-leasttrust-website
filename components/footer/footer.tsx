@@ -21,22 +21,22 @@ const Footer: React.FC = () => {
             <h3 className="footer__heading">Services</h3>
             <ul className="footer__list">
               <li className="footer__list-item">
-                <a href="#" className="footer__link">
+                <a href="https://leasttrust.com/dataprotection/" className="footer__link">
                   Data Protection
                 </a>
               </li>
               <li className="footer__list-item">
-                <a href="#" className="footer__link">
+                <a href="https://leasttrust.com/riskandintellectualproperty/" className="footer__link">
                   Insider Threat Programs
                 </a>
               </li>
               <li className="footer__list-item">
-                <a href="#" className="footer__link">
+                <a href="https://leasttrust.com/ai-integrations/" className="footer__link">
                   AI Integrations
                 </a>
               </li>
               <li className="footer__list-item">
-                <a href="#" className="footer__link">
+                <a href="https://leasttrust.com/secure-it-services/" className="footer__link">
                   Security Advisory
                 </a>
               </li>
@@ -52,7 +52,7 @@ const Footer: React.FC = () => {
                 </a>
               </li>
               <li className="footer__list-item">
-                <a href="#" className="footer__link">
+                <a href="https://leasttrust.com/our-story/" className="footer__link">
                   Team
                 </a>
               </li>
