@@ -47,7 +47,7 @@ const Footer: React.FC = () => {
             <h3 className="footer__heading">Company</h3>
             <ul className="footer__list">
               <li className="footer__list-item">
-                <a href="#" className="footer__link">
+                <a href="https://leasttrust.com/our-story/" className="footer__link">
                   About Us
                 </a>
               </li>
@@ -57,7 +57,7 @@ const Footer: React.FC = () => {
                 </a>
               </li>
               <li className="footer__list-item">
-                <a href="#" className="footer__link">
+                <a href="#contact" className="footer__link">
                   Contact
                 </a>
               </li>
@@ -68,7 +68,12 @@ const Footer: React.FC = () => {
             <h3 className="footer__heading">Connect</h3>
             <ul className="footer__list">
               <li className="footer__list-item">
-                <a href="#" className="footer__link footer__link--social">
+                <a
+                  href="https://www.linkedin.com/company/98534281/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="footer__link footer__link--social"
+                >
                   <span className="footer__social-icon">
                     <Linkedin size={16} />
                   </span>

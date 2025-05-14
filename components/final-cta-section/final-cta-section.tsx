@@ -70,7 +70,7 @@ const FinalCTASection: React.FC = () => {
                 <h3 className="text-2xl font-semibold mb-4">Schedule a Call</h3>
                 <p className="text-gray-600 mb-6">Choose a convenient time for a call with our security experts.</p>
                 <a
-                  href="https://calendly.com/your-calendly-link"
+                  href="https://calendar.app.google/53yGP58pPZiY8XEN6"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn--primary inline-flex items-center"

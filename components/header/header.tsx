@@ -27,7 +27,7 @@ const Header: React.FC<HeaderProps> = () => {
         { label: "Cyber Insurance Readiness", href: "#" },
       ],
     },
-    { label: "About", href: "#" },
+    { label: "About", href: "https://leasttrust.com/our-story/" },
     { label: "Contact", href: "#contact" },
   ]
 
