@@ -103,7 +103,7 @@ const Footer: React.FC = () => {
         <div className="footer__bottom">
           <p className="footer__copyright">© 2025 LeastTrust. All rights reserved.</p>
           <div className="footer__legal">
-            <a href="#" className="footer__legal-link">
+            <a href="https://leasttrust.com/VCISO/#FAQ" className="footer__legal-link">
               FAQ
             </a>
           </div>
