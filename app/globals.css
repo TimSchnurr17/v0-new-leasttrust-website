@@ -1186,7 +1186,6 @@
   transform: translateY(20px);
   animation: fadeIn var(--transition-slow) var(--transition-ease) forwards;
   animation-play-state: paused;
-  height: 120px;
 }
 
 .partners-section--visible .partner-logo {
@@ -1225,5 +1224,334 @@
 
   .partners-section__title {
     font-size: var(--font-size-4xl);
+  }
+}
+
+/* Add these styles to the end of your existing globals.css file */
+
+/* About Hero Section Styles */
+.about-hero-section {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 8rem 0 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-hero-section__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.about-hero-section__background-image {
+  object-fit: cover;
+  object-position: center;
+}
+
+.about-hero-section__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(38, 94, 114, 0.9), rgba(38, 94, 114, 0.7));
+  z-index: 1;
+}
+
+.about-hero-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1));
+  z-index: 2;
+}
+
+.about-hero-section__container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  text-align: center;
+  position: relative;
+  z-index: 3;
+}
+
+.about-hero-section__title {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-6);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all var(--transition-slow) var(--transition-ease);
+}
+
+.about-hero-section__subtitle {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-10);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all var(--transition-slow) var(--transition-ease);
+  transition-delay: 200ms;
+}
+
+.about-hero-section__content {
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all var(--transition-slow) var(--transition-ease);
+  transition-delay: 400ms;
+}
+
+.about-hero-section__text {
+  margin-bottom: var(--spacing-4);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+}
+
+.about-hero-section--visible .about-hero-section__title,
+.about-hero-section--visible .about-hero-section__subtitle,
+.about-hero-section--visible .about-hero-section__content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (min-width: 768px) {
+  .about-hero-section {
+    padding: 10rem 0 6rem;
+  }
+
+  .about-hero-section__title {
+    font-size: var(--font-size-5xl);
+  }
+
+  .about-hero-section__subtitle {
+    font-size: var(--font-size-2xl);
+  }
+}
+
+/* Team Section Styles */
+.team-section {
+  padding: var(--spacing-16) 0;
+  background-color: var(--color-white);
+}
+
+.team-section__container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  text-align: center;
+}
+
+.team-section__title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray-900);
+  margin-bottom: var(--spacing-4);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all var(--transition-slow) var(--transition-ease);
+}
+
+.team-section__subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-gray-600);
+  margin-bottom: var(--spacing-12);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all var(--transition-slow) var(--transition-ease);
+  transition-delay: 200ms;
+}
+
+.team-section__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-12);
+  margin-bottom: var(--spacing-16);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all var(--transition-slow) var(--transition-ease);
+  transition-delay: 400ms;
+}
+
+.team-section--visible .team-section__title,
+.team-section--visible .team-section__subtitle,
+.team-section--visible .team-section__grid,
+.team-section--visible .team-section__values {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.team-card {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  transition: all var(--transition-normal) var(--transition-ease);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn var(--transition-slow) var(--transition-ease) forwards;
+  animation-play-state: paused;
+  display: flex;
+  flex-direction: column;
+}
+
+.team-section--visible .team-card {
+  animation-play-state: running;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.team-card__image-container {
+  width: 200px;
+  height: 200px;
+  margin: var(--spacing-6) auto;
+  border-radius: var(--border-radius-full);
+  overflow: hidden;
+  border: 4px solid var(--color-primary-light);
+}
+
+.team-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-card__content {
+  padding: 0 var(--spacing-6) var(--spacing-6);
+  text-align: center;
+}
+
+.team-card__name {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray-900);
+  margin-bottom: var(--spacing-2);
+}
+
+.team-card__position {
+  font-size: var(--font-size-lg);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-4);
+  font-weight: var(--font-weight-medium);
+}
+
+.team-card__bio {
+  color: var(--color-gray-700);
+  margin-bottom: var(--spacing-6);
+  line-height: var(--line-height-relaxed);
+}
+
+.team-card__linkedin-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-3) var(--spacing-6);
+  background-color: #0077b5; /* LinkedIn blue */
+  color: var(--color-white);
+  border-radius: var(--border-radius-md);
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+  transition: all var(--transition-fast) var(--transition-ease);
+}
+
+.team-card__linkedin-button:hover {
+  background-color: #005582; /* Darker LinkedIn blue */
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.team-card__linkedin-icon {
+  margin-right: var(--spacing-2);
+}
+
+/* Add this to the existing team card styles in your globals.css */
+.team-card__credentials {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-gray-700);
+}
+
+.team-section__values {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all var(--transition-slow) var(--transition-ease);
+  transition-delay: 600ms;
+}
+
+.team-section__values-title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray-900);
+  margin-bottom: var(--spacing-8);
+}
+
+.team-section__values-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-6);
+}
+
+.value-card {
+  background-color: var(--color-gray-100);
+  padding: var(--spacing-6);
+  border-radius: var(--border-radius-lg);
+  text-align: left;
+}
+
+.value-card__title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-2);
+}
+
+.value-card__text {
+  color: var(--color-gray-700);
+  line-height: var(--line-height-relaxed);
+}
+
+@media (min-width: 768px) {
+  .team-card {
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+  }
+
+  .team-card__image-container {
+    margin: var(--spacing-6);
+  }
+
+  .team-card__content {
+    padding: var(--spacing-6);
+    text-align: left;
+  }
+
+  .team-section__values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .team-section__title {
+    font-size: var(--font-size-4xl);
+  }
+
+  .team-section__values-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 }

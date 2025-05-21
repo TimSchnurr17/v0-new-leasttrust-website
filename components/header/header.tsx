@@ -14,7 +14,7 @@ const Header: React.FC<HeaderProps> = () => {
 
   // Main navigation items
   const navItems: NavItem[] = [
-    { label: "Home", href: "#" },
+    { label: "Home", href: "/" },
     {
       label: "Services",
       href: "#",
@@ -27,7 +27,7 @@ const Header: React.FC<HeaderProps> = () => {
         { label: "Cyber Insurance Readiness", href: "https://leasttrust.com/cyber-insurance-readiness/" },
       ],
     },
-    { label: "About", href: "https://leasttrust.com/our-story/" },
+    { label: "About", href: "/about" },
     { label: "Contact", href: "#contact" },
   ]
 
