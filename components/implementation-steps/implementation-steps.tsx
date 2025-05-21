@@ -129,7 +129,7 @@ const ImplementationSteps: React.FC = () => {
             Download our comprehensive guide on AI readiness and data-centric security.
           </p>
           <a
-            href="/downloads/cybersecurity-ai-readiness.pdf"
+            href="https://github.com/TimSchnurr17/AIreadiness/blob/4f6d88e82b1ca7ef259e68326fe6654c10ca4eb5/Maturing%20from%20perimeter%20defense%20to%20data-centric%20security.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn--primary implementation-steps-section__download-button"

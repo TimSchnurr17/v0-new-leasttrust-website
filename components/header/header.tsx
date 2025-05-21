@@ -21,10 +21,8 @@ const Header: React.FC<HeaderProps> = () => {
       subItems: [
         { label: "Data Protection Services", href: "/data-protection" },
         { label: "Insider Threat / Trade Secrets", href: "/insider-threat" },
-        { label: "AI Integrations", href: "https://leasttrust.com/ai-integrations/" },
-        { label: "Security Advisory / SOC2", href: "https://leasttrust.com/secure-it-services/" },
-        { label: "Corporate Training", href: "https://leasttrust.com/group-training/" },
-        { label: "Cyber Insurance Readiness", href: "https://leasttrust.com/cyber-insurance-readiness/" },
+        { label: "SOC2 and Cyber Insurance Readiness", href: "/soc2-cyber-insurance" },
+        { label: "Corporate Training", href: "/group-training" },
       ],
     },
     { label: "About", href: "/about" },
