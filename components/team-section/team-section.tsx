@@ -85,25 +85,25 @@ const TeamSection: React.FC = () => {
             <div className="value-card">
               <h4 className="value-card__title">Integrity</h4>
               <p className="value-card__text">
-                We operate with the highest ethical standards and transparency in all our client relationships.
+                We operate with the highest transparency and strive to identify conflicts of interest.
               </p>
             </div>
             <div className="value-card">
               <h4 className="value-card__title">Innovation</h4>
               <p className="value-card__text">
-                We continuously explore new technologies and approaches to stay ahead of evolving security threats.
+                We continuously explore new technologies partners to stay ahead of evolving security threats.
               </p>
             </div>
             <div className="value-card">
               <h4 className="value-card__title">Excellence</h4>
               <p className="value-card__text">
-                We are committed to delivering exceptional results and exceeding client expectations.
+                We are committed to delivering exceptional results and focusing on our core strengths.
               </p>
             </div>
             <div className="value-card">
-              <h4 className="value-card__title">Partnership</h4>
+              <h4 className="value-card__title">Trust</h4>
               <p className="value-card__text">
-                We build lasting relationships with our clients, working together to achieve their security goals.
+                We build lasting relationships with our clients, working together to achieve their goals.
               </p>
             </div>
           </div>
