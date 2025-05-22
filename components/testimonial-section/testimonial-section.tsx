@@ -15,17 +15,17 @@ const TestimonialSection: React.FC = () => {
     {
       quote:
         "The team at LeastTrust provided us with a comprehensive security assessment that revealed critical gaps we weren't aware of. Their remediation plan was practical and effective.",
-      author: "Jennifer Williams",
+      author: "Jennifer Willams",
       position: "VP of Operations",
-      company: "HealthTech Solutions",
+      company: "HealthBefore Partner",
       image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1361&auto=format&fit=crop",
     },
     {
       quote:
         "Working with LeastTrust transformed our approach to data security. Their tailored solutions and ongoing support have been instrumental in protecting our sensitive information.",
-      author: "Robert Garcia",
+      author: "Robert L. Garcia",
       position: "CEO",
-      company: "Innovative Startups LLC",
+      company: "Innovating Disciplines LLC",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=1470&auto=format&fit=crop",
     },
   ]
