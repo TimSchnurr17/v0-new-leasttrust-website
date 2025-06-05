@@ -17,7 +17,7 @@ const Header: React.FC<HeaderProps> = () => {
     { label: "Home", href: "/" },
     {
       label: "Services",
-      href: "#",
+      href: "javascript:void(0)", // This makes it non-clickable but still allows the dropdown to work
       subItems: [
         { label: "Data Protection Services", href: "/data-protection" },
         { label: "Insider Threat / Trade Secrets", href: "/insider-threat" },

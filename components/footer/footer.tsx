@@ -21,23 +21,23 @@ const Footer: React.FC = () => {
             <h3 className="footer__heading">Services</h3>
             <ul className="footer__list">
               <li className="footer__list-item">
-                <a href="https://leasttrust.com/dataprotection/" className="footer__link">
+                <a href="https://leasttrust.com/data-protection/" className="footer__link">
                   Data Protection
                 </a>
               </li>
               <li className="footer__list-item">
-                <a href="https://leasttrust.com/riskandintellectualproperty/" className="footer__link">
+                <a href="https://leasttrust.com/insider-threat/" className="footer__link">
                   Insider Threat Programs
                 </a>
               </li>
               <li className="footer__list-item">
-                <a href="https://leasttrust.com/ai-integrations/" className="footer__link">
-                  AI Integrations
+                <a href="https://leasttrust.com/soc2-cyber-insurance/" className="footer__link">
+                  AI Readiness & Insurance & SOC2
                 </a>
               </li>
               <li className="footer__list-item">
-                <a href="https://leasttrust.com/secure-it-services/" className="footer__link">
-                  Security Advisory
+                <a href="https://leasttrust.com/group-training/" className="footer__link">
+                  Online Training & Live Workshops
                 </a>
               </li>
             </ul>
@@ -47,12 +47,12 @@ const Footer: React.FC = () => {
             <h3 className="footer__heading">Company</h3>
             <ul className="footer__list">
               <li className="footer__list-item">
-                <a href="https://leasttrust.com/our-story/" className="footer__link">
+                <a href="https://leasttrust.com/about" className="footer__link">
                   About Us
                 </a>
               </li>
               <li className="footer__list-item">
-                <a href="https://leasttrust.com/our-story/" className="footer__link">
+                <a href="https://leasttrust.com/about" className="footer__link">
                   Team
                 </a>
               </li>
@@ -81,7 +81,7 @@ const Footer: React.FC = () => {
                 </a>
               </li>
               <li className="footer__list-item">
-                <a href="#" className="footer__link footer__link--social">
+                <a href="https://www.datatheftnews.com/" className="footer__link footer__link--social">
                   <span className="footer__social-icon">
                     <Mail size={16} />
                   </span>
@@ -89,7 +89,7 @@ const Footer: React.FC = () => {
                 </a>
               </li>
               <li className="footer__list-item">
-                <a href="#" className="footer__link footer__link--social">
+                <a href="https://www.datatheftnews.com/blog" className="footer__link footer__link--social">
                   <span className="footer__social-icon">
                     <Hexagon size={16} />
                   </span>
@@ -102,11 +102,7 @@ const Footer: React.FC = () => {
 
         <div className="footer__bottom">
           <p className="footer__copyright">© 2025 LeastTrust. All rights reserved.</p>
-          <div className="footer__legal">
-            <a href="https://leasttrust.com/VCISO/#FAQ" className="footer__legal-link">
-              FAQ
-            </a>
-          </div>
+          <div className="footer__legal"></div>
         </div>
       </div>
     </footer>
