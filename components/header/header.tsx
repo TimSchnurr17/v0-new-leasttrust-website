@@ -21,6 +21,7 @@ const Header: React.FC<HeaderProps> = () => {
       subItems: [
         { label: "Data Protection Services", href: "/data-protection" },
         { label: "Insider Threat / Trade Secrets", href: "/insider-threat" },
+        { label: "Cyber Insurance Readiness", href: "/cyber-insurance-readiness" },
         { label: "SOC2 and Cyber Insurance Readiness", href: "/soc2-cyber-insurance" },
         { label: "Corporate Training", href: "/group-training" },
       ],
