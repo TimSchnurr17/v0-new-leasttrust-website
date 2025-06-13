@@ -76,7 +76,7 @@ const StakesSection: React.FC = () => {
       className={`stakes-section ${isIntersecting ? "stakes-section--visible" : ""}`}
     >
       <div className="stakes-section__container">
-        <h2 className="stakes-section__title">The High Cost of Data Breaches</h2>
+        <h2 className="stakes-section__title">The High Cost of Employee Data Breaches</h2>
         <p className="stakes-section__subtitle">What risks are you willing to take with your proprietary data?</p>
 
         <div className="stakes-section__grid">
