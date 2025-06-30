@@ -2,11 +2,20 @@ import { openai } from "@ai-sdk/openai"
 import { streamText } from "ai"
 
 export async function POST(req: Request) {
-  const { messages } = await req.json()
+  try {
+    const { messages } = await req.json()
 
-  const result = await streamText({
-    model: openai("gpt-4o"),
-    system: `You are an AI assistant for LeastTrust, a cybersecurity consulting firm specializing in insider threat protection, data protection, and trade secret security.
+    // Handle both regular and service account keys
+    const apiKey = process.env.OPENAI_API_KEY
+    if (!apiKey) {
+      throw new Error("OpenAI API key not found")
+    }
+
+    const result = await streamText({
+      model: openai("gpt-4o", {
+        apiKey: apiKey,
+      }),
+      system: `You are an AI assistant for LeastTrust, a cybersecurity consulting firm specializing in insider threat protection, data protection, and trade secret security.
 
 Company Overview:
 - LeastTrust helps organizations protect their "crown jewels" - their most valuable intellectual property and sensitive data
@@ -35,8 +44,21 @@ Guidelines:
 - Mention the phone number (551-751-0010) when appropriate
 - Focus on business value, not just technical details
 - If asked about competitors, focus on LeastTrust's unique business-focused approach`,
-    messages,
-  })
+      messages,
+    })
 
-  return result.toDataStreamResponse()
+    return result.toDataStreamResponse()
+  } catch (error) {
+    console.error("Chat API error:", error)
+    return new Response(
+      JSON.stringify({
+        error: "Failed to process chat request",
+        details: error instanceof Error ? error.message : "Unknown error",
+      }),
+      {
+        status: 500,
+        headers: { "Content-Type": "application/json" },
+      },
+    )
+  }
 }
