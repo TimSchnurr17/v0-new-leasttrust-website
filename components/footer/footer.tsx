@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
         <div className="footer__columns">
           <div className="footer__column footer__column--brand">
             <Logo variant="white" />
-            <p className="footer__tagline italic">Guardians of Your Crown Jewels</p>
+            <p className="footer__tagline italic">Insider Threat Advisory</p>
             <address className="footer__address">
               Financial District
               <br />
