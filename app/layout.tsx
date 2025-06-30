@@ -6,6 +6,7 @@ import { Inter } from "next/font/google"
 import Header from "@/components/header/header"
 import Footer from "@/components/footer/footer"
 import FAQModal from "@/components/faq/faq-modal"
+import AIChat from "@/components/ai-chat/ai-chat"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -29,6 +30,7 @@ export default function RootLayout({
             <main>{children}</main>
             <Footer />
             <FAQModal />
+            <AIChat />
           </div>
         </ThemeProvider>
       </body>
