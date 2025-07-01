@@ -17,7 +17,7 @@ const Header: React.FC<HeaderProps> = () => {
     { label: "Home", href: "/" },
     {
       label: "Services",
-      href: "javascript:void(0)", // This makes it non-clickable but still allows the dropdown to work
+      href: "#", // Change from "javascript:void(0)" to "#"
       subItems: [
         { label: "Data Protection Services", href: "/data-protection" },
         { label: "Insider Threat / Trade Secrets", href: "/insider-threat" },
@@ -56,7 +56,11 @@ const Header: React.FC<HeaderProps> = () => {
           <ul className="desktop-nav__list">
             {navItems.map((item, index) => (
               <li key={index} className={`desktop-nav__item ${item.subItems ? "has-dropdown" : ""}`}>
-                <a href={item.href} className="desktop-nav__link">
+                <a
+                  href={item.href}
+                  className="desktop-nav__link"
+                  onClick={item.subItems ? (e) => e.preventDefault() : undefined}
+                >
                   {item.label}
                   {item.subItems && (
                     <svg className="dropdown-icon" viewBox="0 0 24 24" width="16" height="16">
