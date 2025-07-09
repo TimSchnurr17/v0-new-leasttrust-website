@@ -5,7 +5,6 @@ import { useRef } from "react"
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer"
 import type { TestimonialItem } from "@/types"
 import { Quote } from "lucide-react"
-import Image from "next/image"
 
 const TestimonialSection: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null)
@@ -18,7 +17,7 @@ const TestimonialSection: React.FC = () => {
       author: "Jennifer Willams",
       position: "VP of Operations",
       company: "HealthBefore Partner",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1361&auto=format&fit=crop",
+      image: "",
     },
     {
       quote:
@@ -26,7 +25,7 @@ const TestimonialSection: React.FC = () => {
       author: "Robert L. Garcia",
       position: "CEO",
       company: "Innovating Disciplines LLC",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=1470&auto=format&fit=crop",
+      image: "",
     },
   ]
 
@@ -47,15 +46,6 @@ const TestimonialSection: React.FC = () => {
               </div>
               <p className="testimonial-card__quote">{item.quote}</p>
               <div className="testimonial-card__author">
-                <div className="testimonial-card__author-image">
-                  <Image
-                    src={item.image || ""}
-                    alt={item.author}
-                    width={60}
-                    height={60}
-                    className="testimonial-card__image"
-                  />
-                </div>
                 <div className="testimonial-card__author-info">
                   <p className="testimonial-card__author-name">{item.author}</p>
                   <p className="testimonial-card__author-position">

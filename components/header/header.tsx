@@ -17,13 +17,14 @@ const Header: React.FC<HeaderProps> = () => {
     { label: "Home", href: "/" },
     {
       label: "Services",
-      href: "#", // Change from "javascript:void(0)" to "#"
+      href: "#",
       subItems: [
         { label: "Data Protection Services", href: "/data-protection" },
         { label: "Insider Threat / Trade Secrets", href: "/insider-threat" },
         { label: "Cyber Insurance Readiness", href: "/cyber-insurance-readiness" },
         { label: "SOC2 and Cyber Insurance Readiness", href: "/soc2-cyber-insurance" },
         { label: "Corporate Training", href: "/group-training" },
+        { label: "Previous Engagements", href: "/previous-engagements" },
       ],
     },
     { label: "About", href: "/about" },
@@ -47,7 +48,6 @@ const Header: React.FC<HeaderProps> = () => {
     <header className={`header ${isScrolled ? "header--scrolled" : ""}`}>
       <div className="header__container">
         <div className="header__logo">
-          {/* The Logo component ensures consistent logo appearance */}
           <Logo />
         </div>
 
