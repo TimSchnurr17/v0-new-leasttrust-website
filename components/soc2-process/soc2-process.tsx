@@ -18,7 +18,7 @@ const SOC2Process: React.FC = () => {
 
   const processSteps: ProcessStep[] = [
     {
-      icon: <ClipboardList size={40} />,
+      icon: <ClipboardList size={48} />,
       title: "Gap Assessment",
       description: "Evaluate your current security posture against SOC2 requirements and cyber insurance standards.",
       items: [
@@ -29,7 +29,7 @@ const SOC2Process: React.FC = () => {
       ],
     },
     {
-      icon: <FileSearch size={40} />,
+      icon: <FileSearch size={48} />,
       title: "Policy Development",
       description: "Create or update security policies and procedures to meet compliance requirements.",
       items: [
@@ -40,7 +40,7 @@ const SOC2Process: React.FC = () => {
       ],
     },
     {
-      icon: <Settings size={40} />,
+      icon: <Settings size={48} />,
       title: "Control Implementation",
       description: "Implement technical and administrative controls to address identified gaps.",
       items: [
@@ -51,7 +51,7 @@ const SOC2Process: React.FC = () => {
       ],
     },
     {
-      icon: <UserCheck size={40} />,
+      icon: <UserCheck size={48} />,
       title: "Training & Awareness",
       description: "Ensure all employees understand their security responsibilities and compliance requirements.",
       items: [
@@ -62,7 +62,7 @@ const SOC2Process: React.FC = () => {
       ],
     },
     {
-      icon: <ShieldCheck size={40} />,
+      icon: <ShieldCheck size={48} />,
       title: "Readiness Assessment",
       description: "Conduct a pre-audit assessment to ensure readiness for formal SOC2 audit or insurance review.",
       items: [
@@ -73,7 +73,7 @@ const SOC2Process: React.FC = () => {
       ],
     },
     {
-      icon: <BarChart size={40} />,
+      icon: <BarChart size={48} />,
       title: "Continuous Monitoring",
       description: "Establish ongoing monitoring and improvement processes to maintain compliance.",
       items: [
@@ -86,35 +86,50 @@ const SOC2Process: React.FC = () => {
   ]
 
   return (
-    <section
-      ref={sectionRef}
-      className={`soc2-process-section ${isIntersecting ? "soc2-process-section--visible" : ""}`}
-    >
-      <div className="soc2-process-section__container">
-        <h2 className="soc2-process-section__title">Our Approach to Compliance Readiness</h2>
-        <p className="soc2-process-section__subtitle">
+    <section ref={sectionRef} className={`process-section ${isIntersecting ? "process-section--visible" : ""}`}>
+      <div className="process-section__container">
+        <h2 className="process-section__title">Our Approach to Compliance Readiness</h2>
+        <p className="process-section__subtitle">
           A structured methodology to prepare your organization for SOC2 compliance and cyber insurance requirements
         </p>
 
-        <div className="soc2-process-section__steps">
+        <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "2rem" }}>
           {processSteps.map((step, index) => (
-            <div
-              key={index}
-              className={`soc2-process-step ${isIntersecting ? "soc2-process-step--visible" : ""}`}
-              style={{ animationDelay: `${index * 0.2}s` }}
-            >
-              <div className="soc2-process-step__header">
-                <div className="soc2-process-step__icon">{step.icon}</div>
-                <h3 className="soc2-process-step__title">{step.title}</h3>
+            <div key={index} className="service-card" style={{ animationDelay: `${index * 0.2}s` }}>
+              <div className="service-card__content">
+                <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "1rem" }}>
+                  <div style={{ color: "#265e72" }}>{step.icon}</div>
+                  <h3 className="service-card__title">{step.title}</h3>
+                </div>
+                <p className="service-card__text">{step.description}</p>
+                <ul style={{ listStyle: "none", padding: 0, margin: "1rem 0 0 0" }}>
+                  {step.items.map((item, itemIndex) => (
+                    <li
+                      key={itemIndex}
+                      style={{
+                        display: "flex",
+                        alignItems: "flex-start",
+                        marginBottom: "0.5rem",
+                        fontSize: "0.875rem",
+                        color: "#4b5563",
+                      }}
+                    >
+                      <span
+                        style={{
+                          width: "6px",
+                          height: "6px",
+                          backgroundColor: "#265e72",
+                          borderRadius: "50%",
+                          marginTop: "0.375rem",
+                          marginRight: "0.75rem",
+                          flexShrink: 0,
+                        }}
+                      ></span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <p className="soc2-process-step__description">{step.description}</p>
-              <ul className="soc2-process-step__items">
-                {step.items.map((item, itemIndex) => (
-                  <li key={itemIndex} className="soc2-process-step__item">
-                    {item}
-                  </li>
-                ))}
-              </ul>
             </div>
           ))}
         </div>

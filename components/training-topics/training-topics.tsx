@@ -5,16 +5,11 @@ import { useRef } from "react"
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer"
 import { CheckCircle } from "lucide-react"
 
-interface TopicItem {
-  title: string
-  description: string
-}
-
 const TrainingTopics: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null)
   const { isIntersecting } = useIntersectionObserver(sectionRef, { threshold: 0.1 })
 
-  const topicItems: TopicItem[] = [
+  const topicItems = [
     {
       title: "Innovation vs Cybersecurity",
       description:
@@ -48,41 +43,32 @@ const TrainingTopics: React.FC = () => {
   ]
 
   return (
-    <section
-      ref={sectionRef}
-      className={`training-topics-section ${isIntersecting ? "training-topics-section--visible" : ""}`}
-    >
-      <div className="training-topics-section__container">
-        <h2 className="training-topics-section__title">Popular Training Topics</h2>
-        <p className="training-topics-section__subtitle">
+    <section ref={sectionRef} className={`value-prop-section ${isIntersecting ? "value-prop-section--visible" : ""}`}>
+      <div className="value-prop-section__container">
+        <h2 className="value-prop-section__title">Popular Training Topics</h2>
+        <p className="value-prop-section__subtitle">
           Our expert-led sessions cover a wide range of relevant security topics to address your organization's needs
         </p>
-
-        <div className="training-topics-section__grid">
+        <div className="value-prop-section__grid">
           {topicItems.map((item, index) => (
-            <div
-              key={index}
-              className={`topic-card ${isIntersecting ? "topic-card--visible" : ""}`}
-              style={{ animationDelay: `${index * 0.2}s` }}
-            >
-              <div className="topic-card__icon">
-                <CheckCircle size={24} />
-              </div>
-              <div className="topic-card__content">
-                <h3 className="topic-card__title">{item.title}</h3>
-                <p className="topic-card__description">{item.description}</p>
+            <div key={index} className="service-card" style={{ animationDelay: `${index * 0.2}s` }}>
+              <div className="service-card__content">
+                <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "1rem" }}>
+                  <CheckCircle size={24} style={{ color: "#265e72" }} />
+                  <h3 className="service-card__title">{item.title}</h3>
+                </div>
+                <p className="service-card__text">{item.description}</p>
               </div>
             </div>
           ))}
         </div>
-
-        <div className="training-topics-section__custom">
-          <h3 className="training-topics-section__custom-title">Need a Custom Topic?</h3>
-          <p className="training-topics-section__custom-text">
+        <div style={{ textAlign: "center", marginTop: "3rem" }}>
+          <h3 style={{ fontSize: "1.5rem", fontWeight: "600", marginBottom: "1rem" }}>Need a Custom Topic?</h3>
+          <p style={{ marginBottom: "2rem" }}>
             We can develop tailored training content to address your organization's specific security challenges and
             objectives.
           </p>
-          <a href="#contact" className="btn btn--primary training-topics-section__custom-button">
+          <a href="#contact" className="btn btn--primary">
             Discuss Your Needs
           </a>
         </div>

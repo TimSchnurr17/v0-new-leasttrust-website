@@ -48,26 +48,21 @@ const ComplianceBenefits: React.FC = () => {
   ]
 
   return (
-    <section
-      ref={sectionRef}
-      className={`compliance-benefits-section ${isIntersecting ? "compliance-benefits-section--visible" : ""}`}
-    >
-      <div className="compliance-benefits-section__container">
-        <h2 className="compliance-benefits-section__title">The Business Value of Compliance</h2>
-        <p className="compliance-benefits-section__subtitle">
+    <section ref={sectionRef} className={`value-prop-section ${isIntersecting ? "value-prop-section--visible" : ""}`}>
+      <div className="value-prop-section__container">
+        <h2 className="value-prop-section__title">The Business Value of Compliance</h2>
+        <p className="value-prop-section__subtitle">
           Beyond security, SOC2 compliance and cyber insurance readiness deliver tangible business benefits
         </p>
 
-        <div className="compliance-benefits-section__grid">
+        <div className="value-prop-section__grid">
           {benefits.map((benefit, index) => (
-            <div
-              key={index}
-              className={`benefit-card ${isIntersecting ? "benefit-card--visible" : ""}`}
-              style={{ animationDelay: `${index * 0.2}s` }}
-            >
-              <div className="benefit-card__icon">{benefit.icon}</div>
-              <h3 className="benefit-card__title">{benefit.title}</h3>
-              <p className="benefit-card__description">{benefit.description}</p>
+            <div key={index} className="service-card" style={{ animationDelay: `${index * 0.2}s` }}>
+              <div className="service-card__content">
+                <div className="service-card__icon">{benefit.icon}</div>
+                <h3 className="service-card__title">{benefit.title}</h3>
+                <p className="service-card__text">{benefit.description}</p>
+              </div>
             </div>
           ))}
         </div>

@@ -45,63 +45,67 @@ const InsiderThreatResources: React.FC = () => {
   ]
 
   return (
-    <section
-      ref={sectionRef}
-      className={`insider-threat-resources-section ${isIntersecting ? "insider-threat-resources-section--visible" : ""}`}
-    >
-      <div className="insider-threat-resources-section__container">
-        <div className="insider-threat-resources-section__header">
-          <h2 className="insider-threat-resources-section__title">Resources & Insights</h2>
-          <p className="insider-threat-resources-section__subtitle">
-            Explore our collection of articles and resources on insider threat protection and trade secret management.
-          </p>
-        </div>
+    <section ref={sectionRef} className={`value-prop-section ${isIntersecting ? "value-prop-section--visible" : ""}`}>
+      <div className="value-prop-section__container">
+        <h2 className="value-prop-section__title">Resources & Insights</h2>
+        <p className="value-prop-section__subtitle">
+          Explore our collection of articles and resources on insider threat protection and trade secret management.
+        </p>
 
-        <div className="insider-threat-resources-section__featured">
-          <div className="insider-threat-resources-section__featured-image">
-            <Image
-              src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=1469&auto=format&fit=crop"
-              alt="Trade secret protection"
-              width={600}
-              height={400}
-              className="insider-threat-resources-section__image"
-            />
-          </div>
-          <div className="insider-threat-resources-section__featured-content">
-            <h3 className="insider-threat-resources-section__featured-title">
-              Safeguarding Your Business's Crown Jewels: Why Trade Secret Protection Matters
-            </h3>
-            <p className="insider-threat-resources-section__featured-excerpt">
-              In today's hypercompetitive marketplace, small businesses often overlook their most valuable assets: their
-              trade secrets. Yes! Every organization, including non-profits have trade secrets. These proprietary data
-              assets - the "crown jewels" of your operation - can make the difference between thriving and merely
-              surviving.
-            </p>
-            <a
-              href="https://www.linkedin.com/pulse/safeguarding-your-businesss-crown-jewels-why-trade-secret-tim-schnurr-gtt4e/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="insider-threat-resources-section__featured-link"
-            >
-              Read the full article on LinkedIn <ExternalLink size={16} className="ml-1" />
-            </a>
-          </div>
-        </div>
-
-        <div className="insider-threat-resources-section__grid">
-          {resources.map((resource, index) => (
-            <div
-              key={index}
-              className={`resource-card ${isIntersecting ? "resource-card--visible" : ""}`}
-              style={{ animationDelay: `${index * 0.2}s` }}
-            >
-              <div className="resource-card__icon">{resource.icon}</div>
-              <h3 className="resource-card__title">{resource.title}</h3>
-              <p className="resource-card__description">{resource.description}</p>
-              <p className="resource-card__source">{resource.source}</p>
-              <a href={resource.link} target="_blank" rel="noopener noreferrer" className="resource-card__link">
-                Read More <ExternalLink size={16} className="ml-1" />
+        <div style={{ marginBottom: "3rem" }}>
+          <div className="service-card">
+            <div className="service-card__image-container">
+              <Image
+                src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=1469&auto=format&fit=crop"
+                alt="Trade secret protection"
+                width={400}
+                height={225}
+                className="service-card__image"
+              />
+            </div>
+            <div className="service-card__content">
+              <h3 className="service-card__title">
+                Safeguarding Your Business's Crown Jewels: Why Trade Secret Protection Matters
+              </h3>
+              <p className="service-card__text">
+                In today's hypercompetitive marketplace, small businesses often overlook their most valuable assets:
+                their trade secrets. Yes! Every organization, including non-profits have trade secrets. These
+                proprietary data assets - the "crown jewels" of your operation - can make the difference between
+                thriving and merely surviving.
+              </p>
+              <a
+                href="https://www.linkedin.com/pulse/safeguarding-your-businesss-crown-jewels-why-trade-secret-tim-schnurr-gtt4e/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn--primary"
+                style={{ marginTop: "1rem", display: "inline-flex", alignItems: "center" }}
+              >
+                Read the full article on LinkedIn <ExternalLink size={16} style={{ marginLeft: "0.5rem" }} />
               </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="value-prop-section__grid">
+          {resources.map((resource, index) => (
+            <div key={index} className="service-card" style={{ animationDelay: `${index * 0.2}s` }}>
+              <div className="service-card__content">
+                <div className="service-card__icon">{resource.icon}</div>
+                <h3 className="service-card__title">{resource.title}</h3>
+                <p className="service-card__text">{resource.description}</p>
+                <p className="service-card__text" style={{ fontWeight: "bold", marginBottom: "1rem" }}>
+                  {resource.source}
+                </p>
+                <a
+                  href={resource.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn--primary"
+                  style={{ display: "inline-flex", alignItems: "center" }}
+                >
+                  Read More <ExternalLink size={16} style={{ marginLeft: "0.5rem" }} />
+                </a>
+              </div>
             </div>
           ))}
         </div>

@@ -5,20 +5,13 @@ import { useRef } from "react"
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer"
 import { Search, BarChart, Settings, FileText, Handshake, TrendingUp } from "lucide-react"
 
-interface ProcessStep {
-  icon: React.ReactNode
-  title: string
-  description: string
-  items: string[]
-}
-
 const CyberInsuranceProcess: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null)
   const { isIntersecting } = useIntersectionObserver(sectionRef, { threshold: 0.1 })
 
-  const processSteps: ProcessStep[] = [
+  const processSteps = [
     {
-      icon: <Search size={40} />,
+      icon: <Search size={48} />,
       title: "Business Impact Assessment",
       description: "Identify and quantify the risks that matter most to your specific business operations.",
       items: [
@@ -29,7 +22,7 @@ const CyberInsuranceProcess: React.FC = () => {
       ],
     },
     {
-      icon: <BarChart size={40} />,
+      icon: <BarChart size={48} />,
       title: "Risk Prioritization",
       description: "Focus resources on the risks that pose the greatest threat to your business continuity.",
       items: [
@@ -40,7 +33,7 @@ const CyberInsuranceProcess: React.FC = () => {
       ],
     },
     {
-      icon: <Settings size={40} />,
+      icon: <Settings size={48} />,
       title: "Tailored Control Implementation",
       description: "Deploy security controls that match your business needs and risk profile.",
       items: [
@@ -51,7 +44,7 @@ const CyberInsuranceProcess: React.FC = () => {
       ],
     },
     {
-      icon: <FileText size={40} />,
+      icon: <FileText size={48} />,
       title: "System Security Plan Development",
       description: "Create documentation that tells a compelling story to insurance underwriters.",
       items: [
@@ -62,7 +55,7 @@ const CyberInsuranceProcess: React.FC = () => {
       ],
     },
     {
-      icon: <Handshake size={40} />,
+      icon: <Handshake size={48} />,
       title: "Insurance Positioning",
       description: "Present your security posture in a way that resonates with insurance professionals.",
       items: [
@@ -73,7 +66,7 @@ const CyberInsuranceProcess: React.FC = () => {
       ],
     },
     {
-      icon: <TrendingUp size={40} />,
+      icon: <TrendingUp size={48} />,
       title: "Continuous Improvement",
       description: "Maintain and enhance your risk management program for ongoing insurance benefits.",
       items: [
@@ -86,35 +79,49 @@ const CyberInsuranceProcess: React.FC = () => {
   ]
 
   return (
-    <section
-      ref={sectionRef}
-      className={`cyber-insurance-process-section ${isIntersecting ? "cyber-insurance-process-section--visible" : ""}`}
-    >
-      <div className="cyber-insurance-process-section__container">
-        <h2 className="cyber-insurance-process-section__title">Our Cyber Insurance Readiness Process</h2>
-        <p className="cyber-insurance-process-section__subtitle">
+    <section ref={sectionRef} className={`process-section ${isIntersecting ? "process-section--visible" : ""}`}>
+      <div className="process-section__container">
+        <h2 className="process-section__title">Our Cyber Insurance Readiness Process</h2>
+        <p className="process-section__subtitle">
           A systematic approach to business-focused risk management that delivers insurance results
         </p>
-
-        <div className="cyber-insurance-process-section__steps">
+        <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "2rem" }}>
           {processSteps.map((step, index) => (
-            <div
-              key={index}
-              className={`cyber-insurance-process-step ${isIntersecting ? "cyber-insurance-process-step--visible" : ""}`}
-              style={{ animationDelay: `${index * 0.2}s` }}
-            >
-              <div className="cyber-insurance-process-step__header">
-                <div className="cyber-insurance-process-step__icon">{step.icon}</div>
-                <h3 className="cyber-insurance-process-step__title">{step.title}</h3>
+            <div key={index} className="service-card" style={{ animationDelay: `${index * 0.2}s` }}>
+              <div className="service-card__content">
+                <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "1rem" }}>
+                  <div style={{ color: "#265e72" }}>{step.icon}</div>
+                  <h3 className="service-card__title">{step.title}</h3>
+                </div>
+                <p className="service-card__text">{step.description}</p>
+                <ul style={{ listStyle: "none", padding: 0, margin: "1rem 0 0 0" }}>
+                  {step.items.map((item, itemIndex) => (
+                    <li
+                      key={itemIndex}
+                      style={{
+                        display: "flex",
+                        alignItems: "flex-start",
+                        marginBottom: "0.5rem",
+                        fontSize: "0.875rem",
+                        color: "#4b5563",
+                      }}
+                    >
+                      <span
+                        style={{
+                          width: "6px",
+                          height: "6px",
+                          backgroundColor: "#265e72",
+                          borderRadius: "50%",
+                          marginTop: "0.375rem",
+                          marginRight: "0.75rem",
+                          flexShrink: 0,
+                        }}
+                      ></span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <p className="cyber-insurance-process-step__description">{step.description}</p>
-              <ul className="cyber-insurance-process-step__items">
-                {step.items.map((item, itemIndex) => (
-                  <li key={itemIndex} className="cyber-insurance-process-step__item">
-                    {item}
-                  </li>
-                ))}
-              </ul>
             </div>
           ))}
         </div>

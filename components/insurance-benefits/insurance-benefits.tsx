@@ -5,17 +5,11 @@ import { useRef } from "react"
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer"
 import { DollarSign, Shield, TrendingDown, FileCheck, Award, Clock } from "lucide-react"
 
-interface BenefitItem {
-  icon: React.ReactNode
-  title: string
-  description: string
-}
-
 const InsuranceBenefits: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null)
   const { isIntersecting } = useIntersectionObserver(sectionRef, { threshold: 0.1 })
 
-  const benefits: BenefitItem[] = [
+  const benefits = [
     {
       icon: <DollarSign size={48} />,
       title: "Lower Premium Rates",
@@ -52,26 +46,20 @@ const InsuranceBenefits: React.FC = () => {
   ]
 
   return (
-    <section
-      ref={sectionRef}
-      className={`insurance-benefits-section ${isIntersecting ? "insurance-benefits-section--visible" : ""}`}
-    >
-      <div className="insurance-benefits-section__container">
-        <h2 className="insurance-benefits-section__title">Insurance Benefits You Can Expect</h2>
-        <p className="insurance-benefits-section__subtitle">
+    <section ref={sectionRef} className={`value-prop-section ${isIntersecting ? "value-prop-section--visible" : ""}`}>
+      <div className="value-prop-section__container">
+        <h2 className="value-prop-section__title">Insurance Benefits You Can Expect</h2>
+        <p className="value-prop-section__subtitle">
           Our business-focused approach delivers tangible improvements to your insurance outcomes
         </p>
-
-        <div className="insurance-benefits-section__grid">
+        <div className="value-prop-section__grid">
           {benefits.map((benefit, index) => (
-            <div
-              key={index}
-              className={`insurance-benefit-card ${isIntersecting ? "insurance-benefit-card--visible" : ""}`}
-              style={{ animationDelay: `${index * 0.2}s` }}
-            >
-              <div className="insurance-benefit-card__icon">{benefit.icon}</div>
-              <h3 className="insurance-benefit-card__title">{benefit.title}</h3>
-              <p className="insurance-benefit-card__description">{benefit.description}</p>
+            <div key={index} className="service-card" style={{ animationDelay: `${index * 0.2}s` }}>
+              <div className="service-card__content">
+                <div className="service-card__icon">{benefit.icon}</div>
+                <h3 className="service-card__title">{benefit.title}</h3>
+                <p className="service-card__text">{benefit.description}</p>
+              </div>
             </div>
           ))}
         </div>

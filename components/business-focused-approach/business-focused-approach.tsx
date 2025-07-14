@@ -10,51 +10,190 @@ const BusinessFocusedApproach: React.FC = () => {
   const { isIntersecting } = useIntersectionObserver(sectionRef, { threshold: 0.1 })
 
   return (
-    <section
-      ref={sectionRef}
-      className={`business-focused-approach-section ${isIntersecting ? "business-focused-approach-section--visible" : ""}`}
-    >
-      <div className="business-focused-approach-section__container">
-        <h2 className="business-focused-approach-section__title">Business-Focused vs. Framework-Driven</h2>
-        <p className="business-focused-approach-section__subtitle">
+    <section ref={sectionRef} className={`value-prop-section ${isIntersecting ? "value-prop-section--visible" : ""}`}>
+      <div className="value-prop-section__container">
+        <h2 className="value-prop-section__title">Business-Focused vs. Framework-Driven</h2>
+        <p className="value-prop-section__subtitle">
           Our approach prioritizes your business needs over checkbox compliance
         </p>
 
-        <div className="business-focused-approach-section__comparison">
-          <div className="approach-comparison">
-            <div className="approach-card approach-card--traditional">
-              <div className="approach-card__header">
-                <X size={32} className="approach-card__icon approach-card__icon--negative" />
-                <h3 className="approach-card__title">Traditional Framework Approach</h3>
+        <div className="value-prop-section__grid">
+          <div className="service-card">
+            <div className="service-card__content">
+              <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "1rem" }}>
+                <X size={32} style={{ color: "#dc2626" }} />
+                <h3 className="service-card__title">Traditional Framework Approach</h3>
               </div>
-              <ul className="approach-card__list">
-                <li className="approach-card__item">One-size-fits-all compliance requirements</li>
-                <li className="approach-card__item">Generic controls that may not fit your business</li>
-                <li className="approach-card__item">Focus on passing audits rather than reducing risk</li>
-                <li className="approach-card__item">Expensive implementations with unclear ROI</li>
-                <li className="approach-card__item">May not address your actual business risks</li>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                <li style={{ display: "flex", alignItems: "flex-start", marginBottom: "0.5rem", fontSize: "0.875rem" }}>
+                  <span
+                    style={{
+                      width: "6px",
+                      height: "6px",
+                      backgroundColor: "#dc2626",
+                      borderRadius: "50%",
+                      marginTop: "0.375rem",
+                      marginRight: "0.75rem",
+                      flexShrink: 0,
+                    }}
+                  ></span>
+                  One-size-fits-all compliance requirements
+                </li>
+                <li style={{ display: "flex", alignItems: "flex-start", marginBottom: "0.5rem", fontSize: "0.875rem" }}>
+                  <span
+                    style={{
+                      width: "6px",
+                      height: "6px",
+                      backgroundColor: "#dc2626",
+                      borderRadius: "50%",
+                      marginTop: "0.375rem",
+                      marginRight: "0.75rem",
+                      flexShrink: 0,
+                    }}
+                  ></span>
+                  Generic controls that may not fit your business
+                </li>
+                <li style={{ display: "flex", alignItems: "flex-start", marginBottom: "0.5rem", fontSize: "0.875rem" }}>
+                  <span
+                    style={{
+                      width: "6px",
+                      height: "6px",
+                      backgroundColor: "#dc2626",
+                      borderRadius: "50%",
+                      marginTop: "0.375rem",
+                      marginRight: "0.75rem",
+                      flexShrink: 0,
+                    }}
+                  ></span>
+                  Focus on passing audits rather than reducing risk
+                </li>
+                <li style={{ display: "flex", alignItems: "flex-start", marginBottom: "0.5rem", fontSize: "0.875rem" }}>
+                  <span
+                    style={{
+                      width: "6px",
+                      height: "6px",
+                      backgroundColor: "#dc2626",
+                      borderRadius: "50%",
+                      marginTop: "0.375rem",
+                      marginRight: "0.75rem",
+                      flexShrink: 0,
+                    }}
+                  ></span>
+                  Expensive implementations with unclear ROI
+                </li>
+                <li style={{ display: "flex", alignItems: "flex-start", marginBottom: "0.5rem", fontSize: "0.875rem" }}>
+                  <span
+                    style={{
+                      width: "6px",
+                      height: "6px",
+                      backgroundColor: "#dc2626",
+                      borderRadius: "50%",
+                      marginTop: "0.375rem",
+                      marginRight: "0.75rem",
+                      flexShrink: 0,
+                    }}
+                  ></span>
+                  May not address your actual business risks
+                </li>
               </ul>
             </div>
+          </div>
 
-            <div className="approach-card approach-card--business">
-              <div className="approach-card__header">
-                <Check size={32} className="approach-card__icon approach-card__icon--positive" />
-                <h3 className="approach-card__title">Our Business-Focused Approach</h3>
+          <div className="service-card">
+            <div className="service-card__content">
+              <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "1rem" }}>
+                <Check size={32} style={{ color: "#16a34a" }} />
+                <h3 className="service-card__title">Our Business-Focused Approach</h3>
               </div>
-              <ul className="approach-card__list">
-                <li className="approach-card__item">Tailored to your specific business operations</li>
-                <li className="approach-card__item">Controls matched to your actual risk profile</li>
-                <li className="approach-card__item">Focus on measurable business impact reduction</li>
-                <li className="approach-card__item">Cost-effective solutions with clear ROI</li>
-                <li className="approach-card__item">Directly addresses your most critical risks</li>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                <li style={{ display: "flex", alignItems: "flex-start", marginBottom: "0.5rem", fontSize: "0.875rem" }}>
+                  <span
+                    style={{
+                      width: "6px",
+                      height: "6px",
+                      backgroundColor: "#16a34a",
+                      borderRadius: "50%",
+                      marginTop: "0.375rem",
+                      marginRight: "0.75rem",
+                      flexShrink: 0,
+                    }}
+                  ></span>
+                  Tailored to your specific business operations
+                </li>
+                <li style={{ display: "flex", alignItems: "flex-start", marginBottom: "0.5rem", fontSize: "0.875rem" }}>
+                  <span
+                    style={{
+                      width: "6px",
+                      height: "6px",
+                      backgroundColor: "#16a34a",
+                      borderRadius: "50%",
+                      marginTop: "0.375rem",
+                      marginRight: "0.75rem",
+                      flexShrink: 0,
+                    }}
+                  ></span>
+                  Controls matched to your actual risk profile
+                </li>
+                <li style={{ display: "flex", alignItems: "flex-start", marginBottom: "0.5rem", fontSize: "0.875rem" }}>
+                  <span
+                    style={{
+                      width: "6px",
+                      height: "6px",
+                      backgroundColor: "#16a34a",
+                      borderRadius: "50%",
+                      marginTop: "0.375rem",
+                      marginRight: "0.75rem",
+                      flexShrink: 0,
+                    }}
+                  ></span>
+                  Focus on measurable business impact reduction
+                </li>
+                <li style={{ display: "flex", alignItems: "flex-start", marginBottom: "0.5rem", fontSize: "0.875rem" }}>
+                  <span
+                    style={{
+                      width: "6px",
+                      height: "6px",
+                      backgroundColor: "#16a34a",
+                      borderRadius: "50%",
+                      marginTop: "0.375rem",
+                      marginRight: "0.75rem",
+                      flexShrink: 0,
+                    }}
+                  ></span>
+                  Cost-effective solutions with clear ROI
+                </li>
+                <li style={{ display: "flex", alignItems: "flex-start", marginBottom: "0.5rem", fontSize: "0.875rem" }}>
+                  <span
+                    style={{
+                      width: "6px",
+                      height: "6px",
+                      backgroundColor: "#16a34a",
+                      borderRadius: "50%",
+                      marginTop: "0.375rem",
+                      marginRight: "0.75rem",
+                      flexShrink: 0,
+                    }}
+                  ></span>
+                  Directly addresses your most critical risks
+                </li>
               </ul>
             </div>
           </div>
         </div>
 
-        <div className="business-focused-approach-section__benefits">
-          <h3 className="business-focused-approach-section__benefits-title">Why This Matters for Insurance</h3>
-          <p className="business-focused-approach-section__benefits-text">
+        <div
+          style={{
+            textAlign: "center",
+            marginTop: "3rem",
+            padding: "2rem",
+            backgroundColor: "#f8f9fa",
+            borderRadius: "0.5rem",
+          }}
+        >
+          <h3 style={{ fontSize: "1.5rem", fontWeight: "600", marginBottom: "1rem" }}>
+            Why This Matters for Insurance
+          </h3>
+          <p>
             Insurance underwriters care about real risk reduction, not compliance certificates. Our business-focused
             approach demonstrates tangible improvements to your risk profile, which translates directly into better
             coverage terms and lower premiums. We help you tell a compelling story about your security posture that

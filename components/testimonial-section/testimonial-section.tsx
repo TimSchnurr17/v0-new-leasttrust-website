@@ -3,29 +3,30 @@
 import type React from "react"
 import { useRef } from "react"
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer"
-import type { TestimonialItem } from "@/types"
 import { Quote } from "lucide-react"
+
+interface Testimonial {
+  quote: string
+  author: string
+  position: string
+}
 
 const TestimonialSection: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null)
   const { isIntersecting } = useIntersectionObserver(sectionRef, { threshold: 0.1 })
 
-  const testimonialItems: TestimonialItem[] = [
+  const testimonials: Testimonial[] = [
     {
       quote:
         "The team at LeastTrust provided us with a comprehensive security assessment that revealed critical gaps we weren't aware of. Their remediation plan was practical and effective.",
-      author: "Jennifer Willams",
-      position: "VP of Operations",
-      company: "HealthBefore Partner",
-      image: "",
+      author: "Jennifer Williams",
+      position: "VP of Operations, HealthBefore Partner",
     },
     {
       quote:
         "Working with LeastTrust transformed our approach to data security. Their tailored solutions and ongoing support have been instrumental in protecting our sensitive information.",
       author: "Robert L. Garcia",
-      position: "CEO",
-      company: "Innovating Disciplines LLC",
-      image: "",
+      position: "CEO, Innovating Disciplines LLC",
     },
   ]
 
@@ -39,18 +40,16 @@ const TestimonialSection: React.FC = () => {
         <h2 className="testimonial-section__title">What Our Clients Say</h2>
 
         <div className="testimonial-section__grid">
-          {testimonialItems.map((item, index) => (
-            <div key={index} className="testimonial-card" style={{ animationDelay: `${index * 0.1}s` }}>
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className="testimonial-card" style={{ animationDelay: `${index * 0.2}s` }}>
               <div className="testimonial-card__quote-icon">
-                <Quote size={40} />
+                <Quote size={48} />
               </div>
-              <p className="testimonial-card__quote">{item.quote}</p>
+              <blockquote className="testimonial-card__quote">{testimonial.quote}</blockquote>
               <div className="testimonial-card__author">
                 <div className="testimonial-card__author-info">
-                  <p className="testimonial-card__author-name">{item.author}</p>
-                  <p className="testimonial-card__author-position">
-                    {item.position}, {item.company}
-                  </p>
+                  <cite className="testimonial-card__author-name">{testimonial.author}</cite>
+                  <p className="testimonial-card__author-position">{testimonial.position}</p>
                 </div>
               </div>
             </div>

@@ -5,17 +5,11 @@ import { useRef } from "react"
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer"
 import { Video, Users, Lightbulb, Layout, Shield, BookOpen } from "lucide-react"
 
-interface TrainingFormatItem {
-  icon: React.ReactNode
-  title: string
-  description: string
-}
-
 const TrainingFormats: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null)
   const { isIntersecting } = useIntersectionObserver(sectionRef, { threshold: 0.1 })
 
-  const formatItems: TrainingFormatItem[] = [
+  const formatItems = [
     {
       icon: <Video size={48} />,
       title: "Webinars",
@@ -55,38 +49,39 @@ const TrainingFormats: React.FC = () => {
   ]
 
   return (
-    <section
-      ref={sectionRef}
-      className={`training-formats-section ${isIntersecting ? "training-formats-section--visible" : ""}`}
-    >
-      <div className="training-formats-section__container">
-        <h2 className="training-formats-section__title">Training Formats</h2>
-        <p className="training-formats-section__subtitle">
+    <section ref={sectionRef} className={`value-prop-section ${isIntersecting ? "value-prop-section--visible" : ""}`}>
+      <div className="value-prop-section__container">
+        <h2 className="value-prop-section__title">Training Formats</h2>
+        <p className="value-prop-section__subtitle">
           We offer a variety of engaging training formats to meet your team's learning preferences and objectives
         </p>
-
-        <div className="training-formats-section__grid">
+        <div className="value-prop-section__grid">
           {formatItems.map((item, index) => (
-            <div
-              key={index}
-              className={`format-card ${isIntersecting ? "format-card--visible" : ""}`}
-              style={{ animationDelay: `${index * 0.2}s` }}
-            >
-              <div className="format-card__icon">{item.icon}</div>
-              <h3 className="format-card__title">{item.title}</h3>
-              <p className="format-card__description">{item.description}</p>
+            <div key={index} className="service-card" style={{ animationDelay: `${index * 0.2}s` }}>
+              <div className="service-card__content">
+                <div className="service-card__icon">{item.icon}</div>
+                <h3 className="service-card__title">{item.title}</h3>
+                <p className="service-card__text">{item.description}</p>
+              </div>
             </div>
           ))}
         </div>
-
-        <div className="training-formats-section__experience">
-          <div className="experience-banner">
-            <h3 className="experience-banner__title">Backed by Real-World Experience</h3>
-            <p className="experience-banner__text">
-              Leverage our consulting, startup, and Fortune 500 experience in leading productive and critical sessions
-              for your team.
-            </p>
-          </div>
+        <div
+          style={{
+            textAlign: "center",
+            marginTop: "3rem",
+            padding: "2rem",
+            backgroundColor: "#f8f9fa",
+            borderRadius: "0.5rem",
+          }}
+        >
+          <h3 style={{ fontSize: "1.5rem", fontWeight: "600", marginBottom: "1rem" }}>
+            Backed by Real-World Experience
+          </h3>
+          <p>
+            Leverage our consulting, startup, and Fortune 500 experience in leading productive and critical sessions for
+            your team.
+          </p>
         </div>
       </div>
     </section>

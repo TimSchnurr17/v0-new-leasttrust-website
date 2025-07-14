@@ -41,70 +41,85 @@ const TeamSection: React.FC = () => {
   ]
 
   return (
-    <section ref={sectionRef} id="team" className={`team-section ${isIntersecting ? "team-section--visible" : ""}`}>
-      <div className="team-section__container">
-        <h2 className="team-section__title">Our Leadership Team</h2>
-        <p className="team-section__subtitle">Meet the experts behind LeastTrust's innovative security solutions</p>
+    <section ref={sectionRef} className={`value-prop-section ${isIntersecting ? "value-prop-section--visible" : ""}`}>
+      <div className="value-prop-section__container">
+        <h2 className="value-prop-section__title">Our Leadership Team</h2>
+        <p className="value-prop-section__subtitle">
+          Meet the experts behind LeastTrust's innovative security solutions
+        </p>
 
-        <div className="team-section__grid">
+        <div className="value-prop-section__grid">
           {teamMembers.map((member, index) => (
-            <div key={index} className="team-card" style={{ animationDelay: `${index * 0.2}s` }}>
-              <div className="team-card__image-container">
+            <div key={index} className="service-card" style={{ animationDelay: `${index * 0.2}s` }}>
+              <div className="service-card__image-container">
                 <Image
                   src={member.image || "/placeholder.svg"}
                   alt={`${member.name} headshot`}
-                  width={300}
-                  height={300}
-                  className="team-card__image"
+                  width={400}
+                  height={225}
+                  className="service-card__image"
                 />
               </div>
-              <div className="team-card__content">
-                <h3 className="team-card__name">
+              <div className="service-card__content">
+                <h3 className="service-card__title">
                   {member.name}
-                  {member.credentials && <span className="team-card__credentials">, {member.credentials}</span>}
+                  {member.credentials && <span>, {member.credentials}</span>}
                 </h3>
-                <p className="team-card__position">{member.position}</p>
-                <p className="team-card__bio">{member.bio}</p>
+                <p className="service-card__text" style={{ fontWeight: "bold", marginBottom: "1rem" }}>
+                  {member.position}
+                </p>
+                <p className="service-card__text">{member.bio}</p>
                 <a
                   href={member.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="team-card__linkedin-button"
+                  className="btn btn--primary"
+                  style={{ marginTop: "1rem", display: "inline-flex", alignItems: "center" }}
                 >
-                  <Linkedin size={20} className="team-card__linkedin-icon" />
-                  <span>Connect on LinkedIn</span>
+                  <Linkedin size={20} style={{ marginRight: "0.5rem" }} />
+                  Connect on LinkedIn
                 </a>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="team-section__values">
-          <h3 className="team-section__values-title">Our Values</h3>
-          <div className="team-section__values-grid">
-            <div className="value-card">
-              <h4 className="value-card__title">Integrity</h4>
-              <p className="value-card__text">
-                We operate with the highest transparency and strive to identify conflicts of interest.
-              </p>
+        <div style={{ marginTop: "4rem" }}>
+          <h3 className="value-prop-section__title" style={{ fontSize: "2rem", marginBottom: "2rem" }}>
+            Our Values
+          </h3>
+          <div className="value-prop-section__grid">
+            <div className="service-card">
+              <div className="service-card__content">
+                <h4 className="service-card__title">Integrity</h4>
+                <p className="service-card__text">
+                  We operate with the highest transparency and strive to identify conflicts of interest.
+                </p>
+              </div>
             </div>
-            <div className="value-card">
-              <h4 className="value-card__title">Innovation</h4>
-              <p className="value-card__text">
-                We continuously explore new technologies partners to stay ahead of evolving security threats.
-              </p>
+            <div className="service-card">
+              <div className="service-card__content">
+                <h4 className="service-card__title">Innovation</h4>
+                <p className="service-card__text">
+                  We continuously explore new technologies partners to stay ahead of evolving security threats.
+                </p>
+              </div>
             </div>
-            <div className="value-card">
-              <h4 className="value-card__title">Excellence</h4>
-              <p className="value-card__text">
-                We are committed to delivering exceptional results and focusing on our core strengths.
-              </p>
+            <div className="service-card">
+              <div className="service-card__content">
+                <h4 className="service-card__title">Excellence</h4>
+                <p className="service-card__text">
+                  We are committed to delivering exceptional results and focusing on our core strengths.
+                </p>
+              </div>
             </div>
-            <div className="value-card">
-              <h4 className="value-card__title">Trust</h4>
-              <p className="value-card__text">
-                We build lasting relationships with our clients, working together to achieve their goals.
-              </p>
+            <div className="service-card">
+              <div className="service-card__content">
+                <h4 className="service-card__title">Trust</h4>
+                <p className="service-card__text">
+                  We build lasting relationships with our clients, working together to achieve their goals.
+                </p>
+              </div>
             </div>
           </div>
         </div>

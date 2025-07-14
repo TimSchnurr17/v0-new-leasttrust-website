@@ -29,7 +29,7 @@ const ImplementationSteps: React.FC = () => {
         "Maintain access tracking and usage monitoring",
         "Enforce retention policies and audit trails",
       ],
-      icon: <CheckCircle size={40} />,
+      icon: <CheckCircle size={48} />,
     },
     {
       number: 2,
@@ -42,7 +42,7 @@ const ImplementationSteps: React.FC = () => {
         "Develop policies and procedures to classify, watermark, and secure data",
         "Create a corporate culture that recognizes and self-classifies data",
       ],
-      icon: <FileText size={40} />,
+      icon: <FileText size={48} />,
     },
     {
       number: 3,
@@ -55,7 +55,7 @@ const ImplementationSteps: React.FC = () => {
         "Establish clear guidelines for data handling",
         "Regularly test and assess employee knowledge and compliance",
       ],
-      icon: <Users size={40} />,
+      icon: <Users size={48} />,
     },
     {
       number: 4,
@@ -68,7 +68,7 @@ const ImplementationSteps: React.FC = () => {
         "Continuously improve classification models",
         "Automate routine classification tasks while maintaining human oversight",
       ],
-      icon: <Database size={40} />,
+      icon: <Database size={48} />,
     },
     {
       number: 5,
@@ -81,39 +81,67 @@ const ImplementationSteps: React.FC = () => {
         "Track incidents and near-misses to identify patterns",
         "Continuously refine your approach based on results and emerging threats",
       ],
-      icon: <BarChart2 size={40} />,
+      icon: <BarChart2 size={48} />,
     },
   ]
 
   return (
-    <section
-      ref={sectionRef}
-      id="implementation"
-      className={`implementation-steps-section ${isIntersecting ? "implementation-steps-section--visible" : ""}`}
-    >
-      <div className="implementation-steps-section__container">
-        <h2 className="implementation-steps-section__title">Implementation Roadmap</h2>
-        <p className="implementation-steps-section__subtitle">
+    <section ref={sectionRef} className={`process-section ${isIntersecting ? "process-section--visible" : ""}`}>
+      <div className="process-section__container">
+        <h2 className="process-section__title">Implementation Roadmap</h2>
+        <p className="process-section__subtitle">
           A systematic approach to implementing data-centric security in your organization
         </p>
 
-        <div className="implementation-steps-section__steps">
+        <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "2rem", marginBottom: "3rem" }}>
           {steps.map((step, index) => (
-            <div
-              key={index}
-              className={`implementation-step ${isIntersecting ? "implementation-step--visible" : ""}`}
-              style={{ animationDelay: `${index * 0.2}s` }}
-            >
-              <div className="implementation-step__header">
-                <div className="implementation-step__number">{step.number}</div>
-                <div className="implementation-step__icon">{step.icon}</div>
-              </div>
-              <div className="implementation-step__content">
-                <h3 className="implementation-step__title">{step.title}</h3>
-                <p className="implementation-step__description">{step.description}</p>
-                <ul className="implementation-step__points">
+            <div key={index} className="service-card" style={{ animationDelay: `${index * 0.2}s` }}>
+              <div className="service-card__content">
+                <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "1rem" }}>
+                  <div
+                    style={{
+                      width: "3rem",
+                      height: "3rem",
+                      backgroundColor: "#265e72",
+                      color: "white",
+                      borderRadius: "50%",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      fontSize: "1.25rem",
+                      fontWeight: "bold",
+                      flexShrink: 0,
+                    }}
+                  >
+                    {step.number}
+                  </div>
+                  <div style={{ color: "#265e72" }}>{step.icon}</div>
+                </div>
+                <h3 className="service-card__title">{step.title}</h3>
+                <p className="service-card__text">{step.description}</p>
+                <ul style={{ listStyle: "none", padding: 0, margin: "1rem 0 0 0" }}>
                   {step.points.map((point, pointIndex) => (
-                    <li key={pointIndex} className="implementation-step__point">
+                    <li
+                      key={pointIndex}
+                      style={{
+                        display: "flex",
+                        alignItems: "flex-start",
+                        marginBottom: "0.5rem",
+                        fontSize: "0.875rem",
+                        color: "#4b5563",
+                      }}
+                    >
+                      <span
+                        style={{
+                          width: "6px",
+                          height: "6px",
+                          backgroundColor: "#265e72",
+                          borderRadius: "50%",
+                          marginTop: "0.375rem",
+                          marginRight: "0.75rem",
+                          flexShrink: 0,
+                        }}
+                      ></span>
                       {point}
                     </li>
                   ))}
@@ -123,16 +151,18 @@ const ImplementationSteps: React.FC = () => {
           ))}
         </div>
 
-        <div className="implementation-steps-section__download">
-          <h3 className="implementation-steps-section__download-title">Want to learn more?</h3>
-          <p className="implementation-steps-section__download-text">
+        <div style={{ textAlign: "center" }}>
+          <h3 className="value-prop-section__title" style={{ fontSize: "1.5rem", marginBottom: "1rem" }}>
+            Want to learn more?
+          </h3>
+          <p className="value-prop-section__subtitle" style={{ marginBottom: "2rem" }}>
             Download our comprehensive guide on AI readiness and data-centric security.
           </p>
           <a
             href="https://github.com/TimSchnurr17/AIreadiness/blob/4f6d88e82b1ca7ef259e68326fe6654c10ca4eb5/Maturing%20from%20perimeter%20defense%20to%20data-centric%20security.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn--primary implementation-steps-section__download-button"
+            className="btn btn--primary"
           >
             Download Presentation
           </a>
