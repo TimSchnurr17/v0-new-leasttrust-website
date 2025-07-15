@@ -13,6 +13,11 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "LeastTrust - Guardians of Your Crown Jewels",
   description: "Protect your firm's data from insider threats and data breaches",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
     generator: 'v0.dev'
 }
 
