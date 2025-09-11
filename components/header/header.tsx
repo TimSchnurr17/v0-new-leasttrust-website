@@ -27,6 +27,7 @@ const Header: React.FC<HeaderProps> = () => {
         { label: "Previous Engagements", href: "/previous-engagements" },
       ],
     },
+    { label: "Insider Platform", href: "/insider-platform" },
     { label: "About", href: "/about" },
     { label: "Contact", href: "#contact" },
   ]
