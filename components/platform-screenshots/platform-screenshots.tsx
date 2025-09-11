@@ -26,14 +26,19 @@ const PlatformScreenshots: React.FC = () => {
                 evidence, attachments, and document requests all in one centralized location.
               </p>
             </div>
-            <div className="service-card__image-container">
+            <div className="service-card__image-container" style={{ height: "auto", minHeight: "500px" }}>
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-09-11%20at%2010.43.50%E2%80%AFAM-IMlQF4TwHzViAIIWmWRZcOXKe2agDH.png"
                 alt="Platform interface showing Entities, Risks, & Controls management with evidence attachments"
                 width={800}
-                height={450}
+                height={600}
                 className="service-card__image"
-                style={{ borderRadius: "0.5rem", boxShadow: "0 10px 25px rgba(0,0,0,0.1)" }}
+                style={{
+                  borderRadius: "0.5rem",
+                  boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
+                  height: "auto",
+                  maxHeight: "600px",
+                }}
               />
             </div>
           </div>
@@ -46,14 +51,19 @@ const PlatformScreenshots: React.FC = () => {
                 threat assessments with comprehensive question banks and automated evaluation.
               </p>
             </div>
-            <div className="service-card__image-container">
+            <div className="service-card__image-container" style={{ height: "auto", minHeight: "500px" }}>
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-09-11%20at%2010.24.20%E2%80%AFAM-R4tKgJB3cRNvYHBiBEXhaTz1CHYb2B.png"
                 alt="Platform interface showing questionnaire and RFP management with insider threat assessments"
                 width={800}
-                height={450}
+                height={600}
                 className="service-card__image"
-                style={{ borderRadius: "0.5rem", boxShadow: "0 10px 25px rgba(0,0,0,0.1)" }}
+                style={{
+                  borderRadius: "0.5rem",
+                  boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
+                  height: "auto",
+                  maxHeight: "600px",
+                }}
               />
             </div>
           </div>
