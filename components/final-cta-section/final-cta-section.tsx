@@ -26,15 +26,17 @@ const FinalCTASection: React.FC = () => {
         <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
           <div className="flex border-b border-gray-200">
             <button
-              className={`flex-1 py-4 px-6 text-center font-medium ${
-                activeTab === "call" ? "bg-primary text-white" : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+              className={`flex-1 py-4 px-6 text-center font-medium transition-colors ${
+                activeTab === "call"
+                  ? "bg-primary text-white border-r border-primary"
+                  : "bg-gray-100 text-gray-600 hover:bg-gray-200 border-r border-gray-300"
               }`}
               onClick={() => setActiveTab("call")}
             >
               Give us a Call
             </button>
             <button
-              className={`flex-1 py-4 px-6 text-center font-medium ${
+              className={`flex-1 py-4 px-6 text-center font-medium transition-colors ${
                 activeTab === "calendar" ? "bg-primary text-white" : "bg-gray-100 text-gray-600 hover:bg-gray-200"
               }`}
               onClick={() => setActiveTab("calendar")}
