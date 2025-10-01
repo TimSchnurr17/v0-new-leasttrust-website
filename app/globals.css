@@ -1117,6 +1117,9 @@
   font-size: var(--font-size-3xl);
   font-weight: var(--font-weight-bold);
   margin-bottom: var(--spacing-4);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all var(--transition-slow) var(--transition-ease);
 }
 
 .final-cta-section__subtitle {
@@ -1125,6 +1128,35 @@
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all var(--transition-slow) var(--transition-ease);
+  transition-delay: 200ms;
+}
+
+.final-cta-section__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all var(--transition-slow) var(--transition-ease);
+  transition-delay: 400ms;
+}
+
+.final-cta-section--visible .final-cta-section__title,
+.final-cta-section--visible .final-cta-section__subtitle,
+.final-cta-section--visible .final-cta-section__buttons {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (min-width: 640px) {
+  .final-cta-section__buttons {
+    flex-direction: row;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -2050,4 +2082,50 @@
   .soc2-overview-section__title {
     font-size: var(--font-size-4xl);
   }
+}
+
+/* Final CTA Section Tab Styles */
+.final-cta-section .max-w-3xl {
+  max-width: 48rem;
+}
+
+.final-cta-section .mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.final-cta-section .bg-white {
+  background-color: #ffffff;
+}
+
+.final-cta-section .rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.final-cta-section .shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.final-cta-section .overflow-hidden {
+  overflow: hidden;
+}
+
+.final-cta-section .border-b {
+  border-bottom-width: 1px;
+}
+
+.final-cta-section .border-r {
+  border-right-width: 1px;
+}
+
+.final-cta-section .border-gray-200 {
+  border-color: #e5e7eb;
+}
+
+.final-cta-section .border-gray-300 {
+  border-color: #d1d5db;
+}
+
+.final-cta-section .border-primary {
+  border-color: var(--color-primary);
 }
