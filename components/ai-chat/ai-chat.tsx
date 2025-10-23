@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { useChat } from "ai"
+import { useChat } from "ai/react"
 import { MessageCircle, X, Send, Phone, Calendar } from "lucide-react"
 
 export default function AIChat() {
