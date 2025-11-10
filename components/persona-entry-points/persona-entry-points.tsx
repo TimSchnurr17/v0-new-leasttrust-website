@@ -86,7 +86,15 @@ const PersonaEntryPoints: React.FC = () => {
           Specialized insider threat and proprietary data protection for decision-makers
         </p>
 
-        <div className="value-prop-section__grid">
+        <div
+          className="value-prop-section__grid"
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+            gap: "2rem",
+            maxWidth: "100%"
+          }}
+        >
           {personas.map((persona, index) => (
             <div key={index} className="service-card" style={{ animationDelay: `${index * 0.1}s` }}>
               <div className="service-card__content">

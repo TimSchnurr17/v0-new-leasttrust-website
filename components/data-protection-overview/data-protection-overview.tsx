@@ -25,7 +25,15 @@ const DataProtectionOverview: React.FC = () => {
           insiders, we help you protect the 90% that regulations ignore.
         </p>
 
-        <div className="value-prop-section__grid">
+        <div
+          className="value-prop-section__grid"
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+            gap: "2rem",
+            maxWidth: "100%"
+          }}
+        >
           <div className="service-card">
             <div className="service-card__content">
               <div className="service-card__icon">

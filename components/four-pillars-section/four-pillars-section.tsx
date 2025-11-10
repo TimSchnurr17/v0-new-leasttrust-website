@@ -123,7 +123,15 @@ const FourPillarsSection: React.FC = () => {
         </div>
 
         {/* Detailed cards */}
-        <div className="value-prop-section__grid">
+        <div
+          className="value-prop-section__grid"
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+            gap: "2rem",
+            maxWidth: "100%"
+          }}
+        >
           {pillars.map((pillar, index) => (
             <div key={index} className="service-card" style={{ animationDelay: `${index * 0.1}s` }}>
               <div className="service-card__content">
