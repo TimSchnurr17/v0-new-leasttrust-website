@@ -1,5 +1,6 @@
 import InsiderThreatHero from "@/components/insider-threat-hero/insider-threat-hero"
 import InsiderThreatOverview from "@/components/insider-threat-overview/insider-threat-overview"
+import CaseFailureSection from "@/components/case-failure-section/case-failure-section"
 import FourPillarsSection from "@/components/four-pillars-section/four-pillars-section"
 import InsiderThreatPhases from "@/components/insider-threat-phases/insider-threat-phases"
 import PersonaEntryPoints from "@/components/persona-entry-points/persona-entry-points"
@@ -11,6 +12,7 @@ export default function InsiderThreatPage() {
     <div className="insider-threat-page">
       <InsiderThreatHero />
       <InsiderThreatOverview />
+      <CaseFailureSection />
       <FourPillarsSection />
       <InsiderThreatPhases />
       <PersonaEntryPoints />

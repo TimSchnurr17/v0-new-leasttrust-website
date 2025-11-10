@@ -23,10 +23,34 @@ const PlatformOverview: React.FC = () => {
             <div className="service-card__content">
               <h3 className="service-card__title">CMMI-Based Maturity Assessment</h3>
               <p className="service-card__text">
-                Start with a comprehensive assessment of your current insider threat program maturity (Level 1-5).
-                Identify gaps, prioritize improvements, and create a roadmap to progress from ad-hoc security to
-                quantitatively-managed, structured programs. Track your maturity progression over time with dashboards
-                and executive reporting.
+                Start with a comprehensive assessment of your current insider threat program maturity (Tier 0-4).
+                Our assessment uses <strong>over 400 questions</strong> developed by working backward from trade secret
+                litigation outcomes and combining best practices from Counter-Intelligence, Cybersecurity, Third-Party
+                Risk Management, Legal, HR, and Governance.
+              </p>
+              <p className="service-card__text">
+                The platform guides stakeholder interviews, collects evidence, and validates controls across 30+ areas
+                in 7 domains: Administrative, Governance, Human Resource, Incident Response, Legal, Physical, and Technical.
+                Dependency-driven questions adapt based on your responses—eliminating irrelevant questions while ensuring
+                comprehensive coverage.
+              </p>
+
+              <h4 style={{ fontSize: "1.25rem", fontWeight: "600", margin: "2rem 0 1rem 0", color: "#1f2937" }}>
+                Assessment Deliverables
+              </h4>
+              <p className="service-card__text">
+                Receive a detailed report featuring:
+              </p>
+              <ul style={{ marginLeft: "1.5rem", marginTop: "1rem", lineHeight: "1.8" }}>
+                <li><strong>Executive Summary</strong> with overall maturity findings and strategic recommendations</li>
+                <li><strong>Spider Charts</strong> visualizing your maturity across all 7 control domains</li>
+                <li><strong>Control-by-Control Analysis</strong> with tier assignments (0-4), observations, and conclusions</li>
+                <li><strong>Gap Analysis</strong> identifying missing controls and implementation weaknesses</li>
+                <li><strong>Prioritized Recommendations</strong> organized by department with actionable improvement areas</li>
+                <li><strong>Evidence Repository</strong> documenting your "reasonable measures" for legal defensibility</li>
+              </ul>
+              <p className="service-card__text" style={{ marginTop: "1rem", fontStyle: "italic" }}>
+                Reports can be re-weighted to align with your risk register and compliance requirements.
               </p>
 
               <h4 style={{ fontSize: "1.25rem", fontWeight: "600", margin: "2rem 0 1rem 0", color: "#1f2937" }}>
