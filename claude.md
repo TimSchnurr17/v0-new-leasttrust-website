@@ -1002,10 +1002,11 @@ CTA: [Assess Your Risk] [See How]
 Use these CTAs throughout the site:
 
 **Primary CTAs (use most frequently)**:
-- "Assess Your Insider Threat Maturity"
-- "Get Your Free Maturity Assessment"
-- "Measure Your CMMI Level"
-- "Schedule a Consultation"
+- "Schedule a Free Consultation" (FREE - leads to consultation)
+- "Get a Consultation" (FREE)
+- "Talk to an Expert" (FREE)
+- "Request an Assessment" (PAID - formal CMMI assessment service)
+- "Learn About Our Assessment" (PAID - describes assessment offering)
 
 **Secondary CTAs**:
 - "View Platform Demo"
@@ -1014,11 +1015,13 @@ Use these CTAs throughout the site:
 - "Learn About the Four Pillars"
 
 **Specific CTAs by Page**:
-- Homepage: "Assess Your Maturity" + "View Platform"
-- Insider Threat: "Get Free Assessment" + "Learn More"
-- Data Protection: "Assess Your IP Risk" + "Contact Us"
-- Platform: "Schedule Demo" + "Start Assessment"
-- Training: "Build Your Program" + "Contact Us"
+- Homepage: "Schedule a Free Consultation" + "Call 551-751-0010"
+- Insider Threat: "Request an Assessment" + "Learn More"
+- Data Protection: "Schedule Consultation" + "Contact Us"
+- Platform: "Schedule Demo" + "Request Assessment"
+- Training: "Discuss Your Needs" + "Contact Us"
+
+**IMPORTANT**: Assessments are PAID services. Consultations are FREE. Never say "Free Assessment"
 
 ---
 

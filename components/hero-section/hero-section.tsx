@@ -31,7 +31,7 @@ const HeroSection: React.FC = () => {
         </p>
         <div className="hero-section__cta">
           <a href="#contact" className="btn btn--light btn--large flex items-center justify-center mr-4">
-            Get Your Free Assessment
+            Schedule a Free Consultation
             <span className="btn__icon ml-2">
               <svg viewBox="0 0 24 24" width="20" height="20">
                 <path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" />
