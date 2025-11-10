@@ -12,16 +12,16 @@ const InsiderThreatOverview: React.FC = () => {
   return (
     <section ref={sectionRef} className={`value-prop-section ${isIntersecting ? "value-prop-section--visible" : ""}`}>
       <div className="value-prop-section__container">
-        <h2 className="value-prop-section__title">Protecting Your Crown Jewels</h2>
+        <h2 className="value-prop-section__title">Protecting Your Proprietary Data from Insider Threats</h2>
         <p className="value-prop-section__subtitle">
-          LeastTrust helps organizations initiate and manage insider threat programs to protect their most valuable
-          assets - their trade secrets and intellectual property. In today's hypercompetitive marketplace, organizations
-          of all sizes often overlook their most valuable assets: their trade secrets.
+          Most companies focus security on the 10% of data covered by regulations (PII, PHI, PCI). But insiders
+          target the other 90%—your proprietary data. Trade secrets, product roadmaps, customer lists, strategic
+          plans, and competitive intelligence. This unregulated data is what drives your business value and competitive advantage.
         </p>
         <p className="value-prop-section__subtitle">
-          These proprietary data assets - the "crown jewels" of your operation - can make the difference between
-          thriving and merely surviving. Understanding how to identify, protect, and leverage these assets is crucial
-          for sustainable business success in an economy increasingly driven by intellectual property.
+          We help you build mature insider threat programs (CMMI-based) to protect these crown jewels. Progress
+          from ad-hoc, reactive security to structured, proactive programs that train employees, deter malicious
+          behavior, detect threats early, and enforce consequences when incidents occur.
         </p>
 
         <div className="value-prop-section__grid">
@@ -30,10 +30,10 @@ const InsiderThreatOverview: React.FC = () => {
               <div className="service-card__icon">
                 <Shield size={48} />
               </div>
-              <h3 className="service-card__title">Comprehensive Protection</h3>
+              <h3 className="service-card__title">CMMI Maturity Assessment</h3>
               <p className="service-card__text">
-                Develop robust strategies to safeguard your organization's most sensitive information from internal
-                threats.
+                Measure your current insider threat program maturity (Level 1-5) and identify gaps to progress
+                from ad-hoc to structured, quantitatively-managed programs.
               </p>
             </div>
           </div>
@@ -43,10 +43,10 @@ const InsiderThreatOverview: React.FC = () => {
               <div className="service-card__icon">
                 <Users size={48} />
               </div>
-              <h3 className="service-card__title">Employee Awareness</h3>
+              <h3 className="service-card__title">Proprietary Data Protection</h3>
               <p className="service-card__text">
-                Create training programs that educate your team on the importance of data protection and security
-                protocols.
+                Protect the 90% of your data that isn't regulated—trade secrets, IP, strategic plans, customer
+                intelligence—that drives your competitive advantage.
               </p>
             </div>
           </div>
@@ -56,9 +56,10 @@ const InsiderThreatOverview: React.FC = () => {
               <div className="service-card__icon">
                 <FileText size={48} />
               </div>
-              <h3 className="service-card__title">Policy Development</h3>
+              <h3 className="service-card__title">Legal Defensibility</h3>
               <p className="service-card__text">
-                Establish clear guidelines and procedures for handling sensitive information and intellectual property.
+                Establish "reasonable measures" for trade secret protection to support IP litigation under the
+                Economic Espionage Act and Defend Trade Secrets Act (DTSA).
               </p>
             </div>
           </div>
@@ -68,9 +69,10 @@ const InsiderThreatOverview: React.FC = () => {
               <div className="service-card__icon">
                 <Lock size={48} />
               </div>
-              <h3 className="service-card__title">Access Controls</h3>
+              <h3 className="service-card__title">Four Pillars Approach</h3>
               <p className="service-card__text">
-                Implement proper access controls and need-to-know policies for sensitive information.
+                Complete insider threat lifecycle: Train employees on IP protection, Deter malicious behavior,
+                Detect threats early, and Enforce consequences.
               </p>
             </div>
           </div>
@@ -80,9 +82,10 @@ const InsiderThreatOverview: React.FC = () => {
               <div className="service-card__icon">
                 <AlertTriangle size={48} />
               </div>
-              <h3 className="service-card__title">Risk Assessment</h3>
+              <h3 className="service-card__title">Third-Party Risk</h3>
               <p className="service-card__text">
-                Identify vulnerabilities and potential insider threats before they become problems.
+                Extend insider threat controls to contractors, vendors, and partners. Support M&A due diligence
+                and investment security assessments.
               </p>
             </div>
           </div>

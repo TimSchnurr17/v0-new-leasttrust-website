@@ -12,15 +12,17 @@ const DataProtectionOverview: React.FC = () => {
   return (
     <section ref={sectionRef} className={`value-prop-section ${isIntersecting ? "value-prop-section--visible" : ""}`}>
       <div className="value-prop-section__container">
-        <h2 className="value-prop-section__title">Comprehensive Data Protection</h2>
+        <h2 className="value-prop-section__title">Why Proprietary Data Requires Different Protection</h2>
         <p className="value-prop-section__subtitle">
-          Our Data Protection service partners your team to protect sensitive data. We will train your people and stand
-          up the tools necessary to tag, track, protect, and monitor sensitive data.
+          HIPAA, PCI, and GDPR don't protect trade secrets. They don't protect your customer lists, strategic plans,
+          product roadmaps, or competitive intelligence. This unregulated proprietary data is what drives your business
+          value—and what insiders target most. Traditional security focuses on compliance. We focus on protecting what
+          matters: your competitive advantage.
         </p>
         <p className="value-prop-section__subtitle">
-          In today's AI-driven landscape, organizations face unprecedented challenges in protecting their data while
-          still leveraging powerful AI tools. LeastTrust helps you navigate this complex terrain with a comprehensive,
-          data-centric approach to security.
+          Our data-centric approach helps you identify, classify, control access to, monitor, and defend your crown
+          jewels. From establishing "reasonable measures" for legal defensibility to detecting unauthorized access by
+          insiders, we help you protect the 90% that regulations ignore.
         </p>
 
         <div className="value-prop-section__grid">
@@ -29,10 +31,10 @@ const DataProtectionOverview: React.FC = () => {
               <div className="service-card__icon">
                 <Tag size={48} />
               </div>
-              <h3 className="service-card__title">Data Classification & Tagging</h3>
+              <h3 className="service-card__title">Proprietary Data Identification</h3>
               <p className="service-card__text">
-                Implement robust data classification systems to identify and tag sensitive information across your
-                organization.
+                Identify what's truly proprietary—trade secrets, IP, competitive intelligence, strategic plans. Not
+                all data is equal. Classify and tag what drives your business value.
               </p>
             </div>
           </div>
@@ -42,10 +44,10 @@ const DataProtectionOverview: React.FC = () => {
               <div className="service-card__icon">
                 <Users size={48} />
               </div>
-              <h3 className="service-card__title">Employee Training</h3>
+              <h3 className="service-card__title">Access Controls & Least Privilege</h3>
               <p className="service-card__text">
-                Develop a security-conscious culture through comprehensive training programs tailored to your
-                organization's needs.
+                Who needs access to your crown jewels? Implement need-to-know controls, monitor access patterns,
+                and detect anomalies before data walks out the door.
               </p>
             </div>
           </div>
@@ -55,9 +57,10 @@ const DataProtectionOverview: React.FC = () => {
               <div className="service-card__icon">
                 <Database size={48} />
               </div>
-              <h3 className="service-card__title">Data Governance</h3>
+              <h3 className="service-card__title">DLP for Proprietary Data</h3>
               <p className="service-card__text">
-                Establish clear policies and procedures for data access, usage, retention, and disposal.
+                Traditional DLP focuses on PII. We configure DLP to detect trade secrets, proprietary methodologies,
+                customer intelligence, and strategic data exfiltration.
               </p>
             </div>
           </div>
@@ -67,10 +70,10 @@ const DataProtectionOverview: React.FC = () => {
               <div className="service-card__icon">
                 <Shield size={48} />
               </div>
-              <h3 className="service-card__title">AI-Safe Implementation</h3>
+              <h3 className="service-card__title">Legal Defensibility</h3>
               <p className="service-card__text">
-                Leverage AI tools safely with proper guardrails and monitoring to prevent data leakage and security
-                incidents.
+                Document "reasonable measures" to protect trade secrets. Support IP litigation under DTSA and
+                Economic Espionage Act. Forensic readiness for insider investigations.
               </p>
             </div>
           </div>
