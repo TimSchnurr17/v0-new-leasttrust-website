@@ -21,6 +21,7 @@
 1. **General Counsels**: IP protection, legal defensibility, trade secret enforcement
 2. **CISOs**: Insider risk programs, detection capabilities, maturity progression
 3. **Compliance Leaders**: Program maturity, policy frameworks, third-party risk
+4. **VCs & Investors**: Portfolio protection, due diligence, investment risk reduction, valuation enhancement
 
 ---
 
@@ -160,6 +161,26 @@ Help organizations progress from Level 1-2 to Level 3-4.
 - Third-party risk management
 - Continuous improvement methodology
 
+### For VCs & Investors
+
+**Pain Points**:
+- Portfolio companies with weak insider threat programs
+- Due diligence blind spots in security maturity
+- Risk of IP theft reducing portfolio company valuations
+- Inability to assess security posture beyond compliance checkboxes
+- Post-investment security incidents damaging returns
+
+**Value Proposition**:
+"Protect your portfolio investments by ensuring mature insider threat programs that defend proprietary data, increase valuations, and reduce investment risk."
+
+**Key Messages**:
+- Due diligence assessment of portfolio company security maturity
+- CMMI-based scoring for objective security evaluation
+- Increase company valuation through demonstrated risk management
+- Protect competitive advantages and proprietary data
+- Reduce post-investment security incident risk
+- Board-level reporting and oversight frameworks
+
 ---
 
 ## Page-by-Page Transformation Plan
@@ -198,10 +219,10 @@ Option C: "Stop Insiders Before They Become Headlines"
 ```
 "Who We Serve"
 
-[General Counsels]                [CISOs]                        [Compliance Leaders]
-Establish legally defensible      Build mature insider risk      Implement structured CMMI-based
-IP protection programs            programs with detection        insider threat frameworks
-→ IP Strategy & Enforcement       → Insider Risk Programs        → Maturity Assessment
+[General Counsels]                [CISOs]                        [Compliance Leaders]            [VCs & Investors]
+Establish legally defensible      Build mature insider risk      Implement structured CMMI-based  Protect portfolio investments
+IP protection programs            programs with detection        insider threat frameworks        with mature risk programs
+→ IP Strategy & Enforcement       → Insider Risk Programs        → Maturity Assessment            → Portfolio Protection
 ```
 
 **Value Proposition Section (Replace Current Services):**
