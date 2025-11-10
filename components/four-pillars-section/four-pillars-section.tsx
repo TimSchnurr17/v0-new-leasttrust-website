@@ -1,7 +1,6 @@
 "use client"
 
-import type React from "react"
-import { useRef } from "react"
+import React, { useRef } from "react"
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer"
 import { GraduationCap, ShieldAlert, Eye, Gavel } from "lucide-react"
 
