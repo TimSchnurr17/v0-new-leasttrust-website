@@ -2,13 +2,14 @@ import type React from "react"
 import { ThemeProvider } from "@/context/theme-context"
 import "./globals.css"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+// Temporarily disabled Google Fonts import for build compatibility
+// import { Inter } from "next/font/google"
 import Header from "@/components/header/header"
 import Footer from "@/components/footer/footer"
 import FAQModal from "@/components/faq/faq-modal"
 import AIChat from "@/components/ai-chat/ai-chat"
 
-const inter = Inter({ subsets: ["latin"] })
+// const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "LeastTrust - Guardians of Your Crown Jewels",
@@ -38,7 +39,7 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       </head>
-      <body className={inter.className}>
+      <body className="font-sans">
         <ThemeProvider>
           <div className="app app--loaded">
             <Header />

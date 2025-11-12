@@ -23,17 +23,24 @@ const HeroSection: React.FC = () => {
         <div className="hero-section__overlay"></div>
       </div>
       <div className="hero-section__container">
-        <h1 className="hero-section__title">Protect Your Firm&apos;s Data</h1>
-        <p className="hero-section__subtitle">Are you worried about insider threats compromising your business?</p>
+        <h1 className="hero-section__title">Protect the 90% of Your Data That Isn&apos;t Regulated</h1>
+        <p className="hero-section__subtitle">
+          HIPAA, PCI, and GDPR cover about 10% of your data. The other 90%—trade secrets, IP, strategic plans,
+          and competitive intelligence—drives your business value. That&apos;s what insiders target most.
+          Build a mature insider threat program to protect what matters.
+        </p>
         <div className="hero-section__cta">
-          <a href="tel:5517510010" className="btn btn--light btn--large flex items-center justify-center">
-            <Phone size={20} className="mr-2" />
-            551-751-0010
+          <a href="#contact" className="btn btn--light btn--large flex items-center justify-center mr-4">
+            Schedule a Free Consultation
             <span className="btn__icon ml-2">
               <svg viewBox="0 0 24 24" width="20" height="20">
                 <path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" />
               </svg>
             </span>
+          </a>
+          <a href="tel:5517510010" className="btn btn--outline-light btn--large flex items-center justify-center">
+            <Phone size={20} className="mr-2" />
+            551-751-0010
           </a>
         </div>
       </div>

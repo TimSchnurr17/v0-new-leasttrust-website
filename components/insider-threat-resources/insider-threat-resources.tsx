@@ -20,6 +20,14 @@ const InsiderThreatResources: React.FC = () => {
 
   const resources: ResourceItem[] = [
     {
+      title: "The Hidden Crisis: Why Insider Threat Statistics Fail to Capture Trade Secret Theft Reality",
+      description:
+        "Discover why traditional insider threat statistics dramatically underreport trade secret theft and what this means for your organization's security strategy.",
+      link: "https://www.iam-media.com/trade-secrets/article/the-hidden-crisis-why-insider-threat-statistics-fail-capture-trade-secret-theft-reality",
+      source: "IAM Media",
+      icon: <FileText size={24} />,
+    },
+    {
       title: "Safeguarding Your Business's Crown Jewels: Why Trade Secret Protection Matters",
       description:
         "Learn why trade secrets are crucial for businesses of all sizes and how to protect these valuable assets from insider threats.",

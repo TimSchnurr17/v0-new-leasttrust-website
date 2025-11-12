@@ -25,9 +25,10 @@ const TrainingHero: React.FC = () => {
         <div className="training-hero-section__overlay"></div>
       </div>
       <div className="training-hero-section__container">
-        <h1 className="training-hero-section__title">Group Training & Workshops</h1>
+        <h1 className="training-hero-section__title">IP Awareness & Insider Threat Training</h1>
         <p className="training-hero-section__subtitle">
-          Interactive, expert-led sessions designed to elevate your team's security awareness and skills
+          Transform employees from your biggest insider risk to your first line of defense. Train your team to
+          recognize, protect, and report on proprietary data and trade secrets—not just general security.
         </p>
       </div>
     </section>

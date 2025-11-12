@@ -11,43 +11,43 @@ const TrainingTopics: React.FC = () => {
 
   const topicItems = [
     {
-      title: "Innovation vs Cybersecurity",
+      title: "IP Awareness: Recognizing Your Proprietary Data",
       description:
-        "Explore the balance between fostering innovation and maintaining robust security measures in your organization.",
+        "Train employees to identify trade secrets, proprietary methodologies, customer intelligence, and strategic data—the 90% that drives your business value but isn't regulated.",
     },
     {
-      title: "AI: Walk, Crawl, Run",
+      title: "Insider Threat Indicators & Early Warning Signs",
       description:
-        "A practical framework for implementing AI technologies while ensuring appropriate security controls at each stage.",
+        "Recognize behavioral indicators of insider threats: departing employees, financial stress, policy violations, and unusual data access patterns. Know when and how to report concerns.",
     },
     {
-      title: "Insider Controls Change Management",
+      title: "Data Classification & Handling Procedures",
       description:
-        "Strategies for implementing and managing insider threat controls while minimizing disruption to business operations.",
+        "How to properly classify, label, store, share, and dispose of proprietary data. Understand acceptable use policies and need-to-know principles for trade secrets.",
     },
     {
-      title: "Achieving Tolerable Friction in a Cybersecurity Program",
+      title: "Third-Party Risk: Contractors, Vendors, & Partners",
       description:
-        "Finding the right balance between security measures and user experience to ensure both protection and productivity.",
+        "Protecting proprietary data when working with external parties. NDA awareness, access controls, and managing insider risk beyond your walls.",
     },
     {
-      title: "IP Strategies for Your Company",
+      title: "Legal Consequences: Trade Secret Theft & IP Litigation",
       description:
-        "Developing comprehensive intellectual property protection strategies tailored to your organization's specific needs.",
+        "Understand the Economic Espionage Act, DTSA, and consequences of IP theft. How your actions support legal defensibility and 'reasonable measures' for trade secret protection.",
     },
     {
-      title: "Building a Security-Conscious Culture",
+      title: "Role-Based IP Protection Training",
       description:
-        "Practical approaches to fostering a culture where security awareness is integrated into everyday operations.",
+        "Customized training for specific roles: executives (governance), engineers (trade secrets), sales (customer data), HR (departing employees), legal (IP enforcement).",
     },
   ]
 
   return (
     <section ref={sectionRef} className={`value-prop-section ${isIntersecting ? "value-prop-section--visible" : ""}`}>
       <div className="value-prop-section__container">
-        <h2 className="value-prop-section__title">Popular Training Topics</h2>
+        <h2 className="value-prop-section__title">IP Awareness & Insider Threat Training Topics</h2>
         <p className="value-prop-section__subtitle">
-          Our expert-led sessions cover a wide range of relevant security topics to address your organization's needs
+          Specialized training focused on protecting proprietary data, recognizing insider threats, and building a security-conscious culture around your crown jewels
         </p>
         <div className="value-prop-section__grid">
           {topicItems.map((item, index) => (

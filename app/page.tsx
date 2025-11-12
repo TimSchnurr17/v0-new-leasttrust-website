@@ -1,6 +1,10 @@
 import HeroSection from "@/components/hero-section/hero-section"
+import PersonaEntryPoints from "@/components/persona-entry-points/persona-entry-points"
+import IntangibleValueSection from "@/components/intangible-value-section/intangible-value-section"
 import StakesSection from "@/components/stakes-section/stakes-section"
+import FourPillarsSection from "@/components/four-pillars-section/four-pillars-section"
 import ValuePropSection from "@/components/value-prop-section/value-prop-section"
+import AssessmentProcessSection from "@/components/assessment-process-section/assessment-process-section"
 import TestimonialSection from "@/components/testimonial-section/testimonial-section"
 import ProcessSection from "@/components/process-section/process-section"
 import PartnersSection from "@/components/partners-section/partners-section"
@@ -10,8 +14,12 @@ export default function HomePage() {
   return (
     <div className="home-page">
       <HeroSection />
+      <IntangibleValueSection />
+      <PersonaEntryPoints />
       <StakesSection />
+      <FourPillarsSection />
       <ValuePropSection />
+      <AssessmentProcessSection />
       <TestimonialSection />
       <ProcessSection />
       <PartnersSection />

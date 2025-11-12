@@ -22,9 +22,10 @@ const InsiderPlatformHero: React.FC = () => {
         <div className="hero-section__overlay"></div>
       </div>
       <div className="hero-section__container">
-        <h1 className="hero-section__title">Insider Platform</h1>
+        <h1 className="hero-section__title">The Insider Threat Platform Built for Maturity</h1>
         <p className="hero-section__subtitle">
-          Cybersecurity's first Insider Threat GRC (Governance, Risk, and Compliance) Platform
+          Assess, build, and operate your insider threat program. Progress from CMMI Level 1 (ad-hoc) to Level 3+
+          (structured, quantitatively-managed) with a platform that supports all Four Pillars: Train, Deter, Detect, and Enforce.
         </p>
       </div>
     </section>
