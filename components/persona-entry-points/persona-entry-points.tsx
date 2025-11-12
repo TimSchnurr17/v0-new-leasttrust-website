@@ -48,16 +48,16 @@ const PersonaEntryPoints: React.FC = () => {
     },
     {
       icon: <FileCheck size={48} />,
-      title: "Compliance Leaders",
-      description: "Implement structured CMMI-based insider threat frameworks",
+      title: "Internal Audit (3rd Line of Defense)",
+      description: "Understand the difference makers in insider threat and validate fiduciary duty",
       benefits: [
-        "CMMI maturity assessment and gap analysis",
-        "Structured program development and policies",
-        "Continuous improvement methodology",
-        "Third-party and vendor risk management",
+        "Advocate, expose, or validate that the company takes fiduciary duty seriously",
+        "Comprehensive assessment of cross-department insider threat controls",
+        "Deep resources and expertise to evaluate program maturity",
+        "Independent validation of protection measures and gaps",
       ],
       link: "/insider-platform",
-      linkText: "Maturity Assessment",
+      linkText: "Assessment Resources",
     },
     {
       icon: <TrendingUp size={48} />,
