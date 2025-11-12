@@ -24,7 +24,9 @@ const InsiderThreatHero: React.FC = () => {
       <div className="hero-section__container">
         <h1 className="hero-section__title">Insider Threat & Trade Secret Protection</h1>
         <p className="hero-section__subtitle">
-          Safeguarding your organization's most valuable intellectual property and sensitive data from internal risks
+          Build mature insider threat programs to protect your proprietary data and crown jewels.
+          Progress from ad-hoc security (CMMI Level 1) to structured, measurable programs (Level 3+)
+          with our Four Pillars approach: Train, Deter, Detect, and Enforce.
         </p>
       </div>
     </section>

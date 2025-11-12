@@ -13,35 +13,35 @@ const StakesSection: React.FC = () => {
   const stakeItems: StakeItem[] = [
     {
       icon: "users",
-      text: "Employees misappropriating your intellectual property",
+      text: "Departing employees downloading customer lists and proprietary data",
     },
     {
       icon: "document",
-      text: "Valuable trade secrets shared with competitors",
+      text: "Trade secrets and IP stolen by insiders and shared with competitors",
     },
     {
       icon: "alert",
-      text: "Increased anxiety about insider threats",
+      text: "Contractors and third parties with unauthorized access to crown jewels",
     },
     {
       icon: "money",
-      text: "Invested resources wasted on data breaches",
+      text: "Inability to demonstrate 'reasonable measures' for IP protection",
     },
     {
       icon: "handshake",
-      text: "Loss of client trust and loyalty",
+      text: "M&A due diligence failures exposing weak insider threat programs",
     },
     {
       icon: "chart",
-      text: "Inability to competitively leverage your assets",
+      text: "Strategic plans and product roadmaps leaked before launch",
     },
     {
       icon: "shield",
-      text: "Unforeseen regulatory penalties",
+      text: "Loss of competitive advantage from proprietary methodology theft",
     },
     {
       icon: "building",
-      text: "A tarnished reputation in the industry",
+      text: "Reduced company valuation due to inadequate data protection",
     },
   ]
 
@@ -76,8 +76,11 @@ const StakesSection: React.FC = () => {
       className={`stakes-section ${isIntersecting ? "stakes-section--visible" : ""}`}
     >
       <div className="stakes-section__container">
-        <h2 className="stakes-section__title">The High Cost of Employee Data Breaches</h2>
-        <p className="stakes-section__subtitle">What risks are you willing to take with your proprietary data?</p>
+        <h2 className="stakes-section__title">The Real Cost of Insider Threats to Proprietary Data</h2>
+        <p className="stakes-section__subtitle">
+          Insiders—malicious or negligent—target your most valuable unregulated data.
+          What risks are you willing to take with your competitive advantage?
+        </p>
 
         <div className="stakes-section__grid">
           {stakeItems.map((item, index) => (

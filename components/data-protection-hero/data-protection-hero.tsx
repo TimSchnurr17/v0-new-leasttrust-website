@@ -22,9 +22,10 @@ const DataProtectionHero: React.FC = () => {
         <div className="hero-section__overlay"></div>
       </div>
       <div className="hero-section__container">
-        <h1 className="hero-section__title">Data Protection Services</h1>
+        <h1 className="hero-section__title">Proprietary Data Protection</h1>
         <p className="hero-section__subtitle">
-          Safely leverage AI tools without risking your organization's cybersecurity
+          Protect the 90% of your data that isn't regulated but drives your business—trade secrets,
+          IP, strategic plans, and competitive intelligence. Focus on what matters most: your competitive advantage.
         </p>
       </div>
     </section>
