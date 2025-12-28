@@ -2,15 +2,31 @@ import type React from "react"
 import Image from "next/image"
 
 interface LogoProps {
-  variant?: "default" | "white" | "small"
+  variant?: "default" | "white" | "small" | "light" | "dark"
 }
 
 const Logo: React.FC<LogoProps> = ({ variant = "default" }) => {
+  // Light variant shows inverted/white logo for dark backgrounds
+  // Dark variant shows standard logo for light backgrounds
+  const isLightVariant = variant === "light" || variant === "white"
+
   return (
-    <a href="/" className={`logo logo--${variant}`} aria-label="LeastTrust Homepage">
-      <div className={`logo__container ${variant === "white" ? "logo__container--transparent" : ""}`}>
-        <Image src="/images/logo.png" alt="LeastTrust Logo" width={180} height={50} className="logo__image" priority />
-      </div>
+    <a
+      href="/"
+      className="block transition-opacity duration-300 hover:opacity-80"
+      aria-label="LeastTrust Homepage"
+    >
+      <Image
+        src="/images/logo.png"
+        alt="LeastTrust"
+        width={160}
+        height={44}
+        className={`
+          h-10 w-auto object-contain
+          ${isLightVariant ? "brightness-0 invert" : ""}
+        `}
+        priority
+      />
     </a>
   )
 }
